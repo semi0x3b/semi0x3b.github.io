@@ -10,13 +10,13 @@
     <link>https://semi0x3b.github.io/tags/</link>
     <guid>https://semi0x3b.github.io/tags/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 05 Aug 2026 12:18:29 GMT</pubDate>
+    <pubDate>Wed, 05 Aug 2026 12:20:09 GMT</pubDate>
   </item><item>
     <title>semicolon;</title>
     <link>https://semi0x3b.github.io/</link>
     <guid>https://semi0x3b.github.io/</guid>
-    <description><![CDATA[ 개발하며 배운 것들을 기록하는 공간입니다. posts — 피쳐 구현기, 트러블슈팅, 회고 매일의 작업 기록(TIL)과 진행 중인 피쳐 노트는 비공개로 쌓이고, 다듬어진 글만 여기에 공개됩니다. ]]></description>
-    <pubDate>Wed, 05 Aug 2026 12:06:51 GMT</pubDate>
+    <description><![CDATA[ 세미콜론은 문장을 끝내지 않고 잇는 기호예요. 끝난 줄 알았던 문제가 다음 줄로 이어지는 게 개발이라, 그 이어짐을 기록하는 공간으로 만들었어요. 인프라 이관, 장애 원인 추적, 구조 개선 같은 일들을 왜 그렇게 했고 어떤 과정을 거쳤는지 중심으로 씁니다. ]]></description>
+    <pubDate>Wed, 05 Aug 2026 12:19:43 GMT</pubDate>
   </item>
     </channel>
   </rss>
