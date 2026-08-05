@@ -6,17 +6,65 @@
       <description>Last 10 notes on semicolon;</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>태그 목록</title>
-    <link>https://semi0x3b.github.io/tags/</link>
-    <guid>https://semi0x3b.github.io/tags/</guid>
+    <title>posts</title>
+    <link>https://semi0x3b.github.io/posts/</link>
+    <guid>https://semi0x3b.github.io/posts/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 05 Aug 2026 13:16:55 GMT</pubDate>
+    <pubDate>Wed, 05 Aug 2026 13:32:42 GMT</pubDate>
   </item><item>
-    <title>semicolon;</title>
-    <link>https://semi0x3b.github.io/</link>
-    <guid>https://semi0x3b.github.io/</guid>
-    <description><![CDATA[ 세미콜론은 문장을 끝내지 않고 잇는 기호예요. 끝난 줄 알았던 문제가 다음 줄로 이어지는 게 개발이라, 그 이어짐을 기록하는 공간으로 만들었어요. 인프라 이관, 장애 원인 추적, 구조 개선 같은 일들을 왜 그렇게 했고 어떤 과정을 거쳤는지 중심으로 씁니다. ]]></description>
-    <pubDate>Wed, 05 Aug 2026 12:19:43 GMT</pubDate>
+    <title>posts</title>
+    <link>https://semi0x3b.github.io/tags/posts</link>
+    <guid>https://semi0x3b.github.io/tags/posts</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Wed, 05 Aug 2026 13:32:42 GMT</pubDate>
+  </item><item>
+    <title>kubernetes</title>
+    <link>https://semi0x3b.github.io/tags/kubernetes</link>
+    <guid>https://semi0x3b.github.io/tags/kubernetes</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Wed, 05 Aug 2026 13:32:42 GMT</pubDate>
+  </item><item>
+    <title>oke</title>
+    <link>https://semi0x3b.github.io/tags/oke</link>
+    <guid>https://semi0x3b.github.io/tags/oke</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Wed, 05 Aug 2026 13:32:42 GMT</pubDate>
+  </item><item>
+    <title>oci</title>
+    <link>https://semi0x3b.github.io/tags/oci</link>
+    <guid>https://semi0x3b.github.io/tags/oci</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Wed, 05 Aug 2026 13:32:42 GMT</pubDate>
+  </item><item>
+    <title>terraform</title>
+    <link>https://semi0x3b.github.io/tags/terraform</link>
+    <guid>https://semi0x3b.github.io/tags/terraform</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Wed, 05 Aug 2026 13:32:42 GMT</pubDate>
+  </item><item>
+    <title>migration</title>
+    <link>https://semi0x3b.github.io/tags/migration</link>
+    <guid>https://semi0x3b.github.io/tags/migration</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Wed, 05 Aug 2026 13:32:42 GMT</pubDate>
+  </item><item>
+    <title>python</title>
+    <link>https://semi0x3b.github.io/tags/python</link>
+    <guid>https://semi0x3b.github.io/tags/python</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Wed, 05 Aug 2026 13:32:42 GMT</pubDate>
+  </item><item>
+    <title>sqlalchemy</title>
+    <link>https://semi0x3b.github.io/tags/sqlalchemy</link>
+    <guid>https://semi0x3b.github.io/tags/sqlalchemy</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Wed, 05 Aug 2026 13:32:42 GMT</pubDate>
+  </item><item>
+    <title>troubleshooting</title>
+    <link>https://semi0x3b.github.io/tags/troubleshooting</link>
+    <guid>https://semi0x3b.github.io/tags/troubleshooting</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Wed, 05 Aug 2026 13:32:42 GMT</pubDate>
   </item>
     </channel>
   </rss>
