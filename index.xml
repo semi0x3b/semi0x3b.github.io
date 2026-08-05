@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+      <title>Semi&#039;s Garden</title>
+      <link>https://semi0123.github.io</link>
+      <description>Last 10 notes on Semi&#039;s Garden</description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <item>
+    <title>태그 목록</title>
+    <link>https://semi0123.github.io/tags/</link>
+    <guid>https://semi0123.github.io/tags/</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Wed, 05 Aug 2026 12:01:24 GMT</pubDate>
+  </item><item>
+    <title>Semi&#039;s Garden</title>
+    <link>https://semi0123.github.io/</link>
+    <guid>https://semi0123.github.io/</guid>
+    <description><![CDATA[ 개발하며 배운 것들을 기록하는 공간입니다. posts — 피쳐 구현기, 트러블슈팅, 회고 매일의 작업 기록(TIL)과 진행 중인 피쳐 노트는 비공개로 쌓이고, 다듬어진 글만 여기에 공개됩니다. ]]></description>
+    <pubDate>Mon, 27 Jul 2026 00:58:23 GMT</pubDate>
+  </item>
+    </channel>
+  </rss>
