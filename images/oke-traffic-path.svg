@@ -44,7 +44,7 @@
 
   <ellipse cx="76" cy="38" rx="62" ry="23" class="box"/>
   <text x="76" y="35" text-anchor="middle" class="lbl">사용자 요청</text>
-  <text x="76" y="50" text-anchor="middle" class="lbl-mono">*.projectlion.io</text>
+  <text x="76" y="50" text-anchor="middle" class="lbl-sm">서비스별 도메인</text>
 
   <rect x="196" y="10" width="190" height="56" class="zone"/>
   <text x="206" y="6" class="zone-lbl">PUBLIC 10.0.0.0/24</text>
@@ -110,24 +110,31 @@
 
   <path d="M140,38 L202,38" class="flow"/>
   <path d="M291,66 L291,137" class="flow"/>
+
+  <!-- Ingress Controller → Kong (설정 반영) -->
   <path d="M370,180 L358,180" class="flow-cfg"/>
   <path d="M443,252 L443,224" class="flow-cfg"/>
-  <path d="M352,168 L574,168" class="flow-auth"/>
-  <path d="M574,196 L352,196" class="flow-auth" stroke-dasharray="4 3"/>
-  <path d="M262,222 L200,344" class="flow"/>
-  <path d="M330,225 L520,344" class="flow"/>
-  <path d="M345,224 L720,344" class="flow"/>
-  <path d="M300,230 L540,488" class="flow"/>
 
-  <path d="M117,492 L150,428" class="flow-data"/>
-  <path d="M239,492 L520,428" class="flow-data"/>
-  <path d="M359,496 L720,428" class="flow-data"/>
+  <!-- Kong ↔ Keycloak: Ingress Controller 박스를 피해 위·아래로 우회 -->
+  <path d="M278,143 L278,128 L645,128 L645,139" class="flow-auth"/>
+  <path d="M660,217 L660,232 L292,232 L292,221" class="flow-auth" stroke-dasharray="4 3"/>
+
+  <!-- Kong → 서비스군: 세로 간선에서 분기 -->
+  <path d="M278,217 L278,310 L200,310 L200,344" class="flow"/>
+  <path d="M278,310 L538,310 L538,344" class="flow"/>
+  <path d="M538,310 L736,310 L736,344" class="flow"/>
+  <path d="M736,310 L840,310 L840,478 L812,478" class="flow"/>
+
+  <!-- 캐시 연결 -->
+  <path d="M117,492 L117,458 L160,458 L160,428" class="flow-data"/>
+  <path d="M239,492 L239,470 L470,470 L470,432" class="flow-data"/>
+  <path d="M359,492 L359,478 L760,478 L760,432" class="flow-data"/>
 
   <text x="305" y="108" class="lbl-sm">요청</text>
-  <text x="455" y="240" text-anchor="middle" class="lbl-sm" fill="#8250df">읽어서 Kong 설정 반영</text>
-  <text x="463" y="162" text-anchor="middle" class="lbl-sm" fill="#9a6700">토큰 검증</text>
-  <text x="463" y="213" text-anchor="middle" class="lbl-sm" fill="#9a6700">결과</text>
-  <text x="150" y="300" class="lbl-sm">인증 통과 후 서비스군별 라우팅</text>
+  <text x="455" y="243" text-anchor="middle" class="lbl-sm" fill="#8250df">Ingress 읽어 Kong 설정 반영</text>
+  <text x="461" y="124" text-anchor="middle" class="lbl-sm" fill="#9a6700">토큰 검증</text>
+  <text x="470" y="245" text-anchor="middle" class="lbl-sm" fill="#9a6700">검증 결과</text>
+  <text x="60" y="306" class="lbl-sm">인증 통과 후 서비스군별 라우팅</text>
 
   <rect x="640" y="600" width="14" height="10" class="box-data"/>
   <text x="660" y="609" class="lbl-sm">파란 테두리 = 캐시·배치 Job (요청 경로 밖)</text>
