@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 330" role="img" aria-label="OKE dev 클러스터 네트워크 구성: VCN 하나에 public, worker, api, db 서브넷 넷을 두고 worker 서브넷에서 노드와 pod가 IP를 함께 사용하는 구조">
+  <style>
+    .lbl { font: 13px system-ui, -apple-system, sans-serif; fill: #24292f; }
+    .lbl-sm { font: 11px system-ui, -apple-system, sans-serif; fill: #57606a; }
+    .lbl-mono { font: 11px ui-monospace, SFMono-Regular, Menlo, monospace; fill: #57606a; }
+    .title { font: 600 13px system-ui, sans-serif; fill: #24292f; }
+    .zone { fill: none; stroke: #d0d7de; stroke-width: 1; stroke-dasharray: 4 3; rx: 8; }
+    .zone-lbl { font: 600 11px system-ui, sans-serif; fill: #8c959f; letter-spacing: .03em; }
+    .box { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.5; rx: 6; }
+    .box-hot { fill: #ffffff; stroke: #bc4c00; stroke-width: 2; rx: 6; }
+    .note { font: 11px system-ui, sans-serif; fill: #bc4c00; }
+    .flow { stroke: #656d76; stroke-width: 1.8; fill: none; marker-end: url(#n-ah); }
+    @media (prefers-color-scheme: dark) {
+      .lbl, .title { fill: #e6edf3; } .lbl-sm, .lbl-mono { fill: #8b949e; }
+      .zone { stroke: #30363d; } .zone-lbl { fill: #6e7681; }
+      .box { fill: #0d1117; stroke: #30363d; }
+      .box-hot { fill: #0d1117; stroke: #db6d28; }
+      .note { fill: #db6d28; } .flow { stroke: #8b949e; }
+    }
+    :root[data-theme="dark"] .lbl, :root[data-theme="dark"] .title { fill: #e6edf3; }
+    :root[data-theme="dark"] .lbl-sm, :root[data-theme="dark"] .lbl-mono { fill: #8b949e; }
+    :root[data-theme="dark"] .zone { stroke: #30363d; }
+    :root[data-theme="dark"] .zone-lbl { fill: #6e7681; }
+    :root[data-theme="dark"] .box { fill: #0d1117; stroke: #30363d; }
+    :root[data-theme="dark"] .box-hot { fill: #0d1117; stroke: #db6d28; }
+    :root[data-theme="dark"] .note { fill: #db6d28; }
+    :root[data-theme="dark"] .flow { stroke: #8b949e; }
+    :root[data-theme="light"] .lbl, :root[data-theme="light"] .title { fill: #24292f; }
+    :root[data-theme="light"] .box { fill: #ffffff; stroke: #d0d7de; }
+  </style>
+  <defs>
+    <marker id="n-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#656d76"/></marker>
+  </defs>
+
+  <rect x="20" y="24" width="660" height="290" class="zone"/>
+  <text x="32" y="18" class="zone-lbl">VCN 10.0.0.0/16 · 리전 서울</text>
+
+  <ellipse cx="76" cy="86" rx="46" ry="22" class="box"/>
+  <text x="76" y="91" text-anchor="middle" class="lbl">인터넷</text>
+
+  <rect x="164" y="56" width="170" height="60" class="box"/>
+  <text x="249" y="80" text-anchor="middle" class="title">public</text>
+  <text x="249" y="99" text-anchor="middle" class="lbl-mono">10.0.0.0/24</text>
+  <text x="164" y="132" class="lbl-sm">로드밸런서, 외부 접점</text>
+
+  <rect x="164" y="176" width="322" height="118" class="box-hot"/>
+  <text x="325" y="200" text-anchor="middle" class="title">worker · 10.0.10.0/24</text>
+  <rect x="182" y="214" width="136" height="60" class="box"/>
+  <text x="250" y="238" text-anchor="middle" class="lbl">워커 노드</text>
+  <text x="250" y="256" text-anchor="middle" class="lbl-sm">E4.Flex 2 OCPU</text>
+  <rect x="334" y="214" width="136" height="60" class="box"/>
+  <text x="402" y="238" text-anchor="middle" class="lbl">pod</text>
+  <text x="402" y="256" text-anchor="middle" class="lbl-sm">노드당 31개</text>
+  <text x="500" y="222" class="note">둘이 같은 서브넷에서</text>
+  <text x="500" y="238" class="note">IP를 나눠 씁니다</text>
+  <text x="500" y="262" class="lbl-sm">쓸 수 있는 IP 251개가</text>
+  <text x="500" y="278" class="lbl-sm">pod 상한을 정해요</text>
+
+  <rect x="516" y="56" width="150" height="60" class="box"/>
+  <text x="591" y="80" text-anchor="middle" class="title">api</text>
+  <text x="591" y="99" text-anchor="middle" class="lbl-mono">10.0.20.0/24</text>
+  <text x="516" y="132" class="lbl-sm">쿠버네티스 API</text>
+
+  <rect x="20" y="176" width="120" height="60" class="box"/>
+  <text x="80" y="200" text-anchor="middle" class="title">db</text>
+  <text x="80" y="219" text-anchor="middle" class="lbl-mono">10.0.30.0/24</text>
+  <text x="20" y="252" class="lbl-sm">관리형 PostgreSQL</text>
+
+  <path d="M124,86 L158,86" class="flow"/>
+  <path d="M249,116 L249,170" class="flow"/>
+  <path d="M164,235 L146,235" class="flow"/>
+  <path d="M486,190 L560,190 L560,122" class="flow"/>
+</svg>
