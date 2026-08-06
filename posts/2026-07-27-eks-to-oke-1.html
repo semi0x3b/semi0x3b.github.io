@@ -16,7 +16,7 @@
 <h2 id="설계가-두-번-뒤집혔다">설계가 두 번 뒤집혔다<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#설계가-두-번-뒤집혔다" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
 <p>OCI에는 테넌시라는 최상위 계정 단위가 있어요. AWS 계정 하나에 해당해요. 처음 설계는 이 테넌시를 새로 만드는 안이었는데, 6일 만에 철회하고 기존 테넌시를 확장하는 쪽으로 선회했어요. 리전은 서울(ap-seoul-1) 그대로고요. 이때 이미 작성해뒀던 dev용 oke.tf와 vcn.tf를 삭제했어요. 컨테이너 레지스트리나 메일 발송처럼 환경과 무관한 자원은 _common compartment로 분리했어요. compartment는 테넌시 안에서 리소스를 묶어 격리하는 논리 단위예요. 폴더에 가까워요.</p>
 <p>최종 설계는 테넌시 하나에 리전은 서울, compartment 8개(환경별 axp-dev/common/prod + 서비스별 분리), 예산은 월 $1,000에 70/90/100% 알림으로 정리됐어요.</p>
-<p>방향이 바뀔 때마다 코드를 지우고 문서를 다시 썼어요. 설계 문서를 여섯 번 고쳐 쓴 끝에 나온 그림이에요.</p>
+<p>방향이 바뀔 때마다 코드를 지우고 다시 썼어요. 그 끝에 나온 그림이에요.</p>
 <h2 id="dev-클러스터는-이렇게-구성했어요">dev 클러스터는 이렇게 구성했어요<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#dev-클러스터는-이렇게-구성했어요" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
 <p>네트워크는 VCN 하나(<code>10.0.0.0/16</code>)에 용도별 서브넷 넷을 뒀어요.</p>
 <p><img src=".././images/oke-network.svg" alt="dev 클러스터 네트워크 구성"/></p>
