@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 270" role="img" aria-label="배포와 비밀값 파이프라인: Git 매니페스트를 ArgoCD가 클러스터에 반영하고, OCI Vault 비밀값을 External Secrets가 쿠버네티스 Secret으로 만들며, cert-manager와 Kyverno가 인증서와 정책을 담당한다">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -8 720 292" role="img" aria-label="배포와 비밀값 파이프라인: Git 매니페스트를 ArgoCD가 클러스터에 반영하고, OCI Vault 비밀값을 External Secrets가 쿠버네티스 Secret으로 만들며, cert-manager와 Kyverno가 인증서와 정책을 담당한다">
   <style>
     text { font-family: system-ui, -apple-system, sans-serif; fill: currentColor; }
     .name { font-size: 13px; font-weight: 600; }
@@ -60,6 +60,6 @@
   <text x="172" y="164" class="edge-lbl">조회</text>
   <text x="404" y="88" class="edge-lbl">sync</text>
   <text x="404" y="156" class="edge-lbl">Secret 주입</text>
-  <text x="300" y="270" class="edge-lbl">TLS 발급</text>
-  <text x="404" y="212" class="edge-lbl">정책 검사</text>
+  <text x="300" y="272" class="edge-lbl">TLS 발급</text>
+  <text x="455" y="212" class="edge-lbl">정책 검사</text>
 </svg>

@@ -57,5 +57,5 @@
   <text x="122" y="72" class="edge-lbl">HTTPS</text>
   <text x="256" y="136" class="edge-lbl">로드밸런서가 전달</text>
   <text x="20" y="240" class="edge-lbl">앱 → PostgreSQL</text>
-  <text x="492" y="168" class="edge-lbl">kubectl</text>
+  <text x="492" y="171" class="edge-lbl">kubectl</text>
 </svg>
