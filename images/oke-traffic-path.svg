@@ -4,7 +4,7 @@
     .name { font-size: 13px; font-weight: 600; }
     .plain { font-size: 13px; }
     .sub { font-size: 11px; opacity: .7; }
-    .mono { font-size: 10.5px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; opacity: .7; }
+    .mono { font-size: 11px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; opacity: .7; }
     .edge-lbl { font-size: 11px; opacity: .7; }
     .zone { fill: none; stroke: currentColor; stroke-width: 1; stroke-dasharray: 4 3; rx: 8; opacity: .3; }
     .zone-lbl { font-size: 11px; font-weight: 600; opacity: .5; }
