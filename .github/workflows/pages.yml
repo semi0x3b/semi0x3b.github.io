@@ -1,0 +1,29 @@
+# semi0x3b.github.io repo에서 실행되는 Pages 배포 워크플로우.
+# notes 빌드 시 public/.github/workflows/pages.yml 로 복사되어 함께 배포된다
+# (peaceiris가 main을 publish_dir로 갈아치우므로 여기서 관리해야 유실되지 않음).
+# legacy Jekyll 빌드(시간당 10회 제한) 대신 Actions 아티팩트 배포를 쓴다.
+name: Deploy Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4
