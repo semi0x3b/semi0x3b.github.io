@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300" role="img" aria-label="EKS에서 OKE로 1편 타임라인: 4월 21일 ATS 설계 시작, 4월 27일 기존 테넌시 확장으로 방향 전환, 5월 4일 설계 확정, 5월 6~8일 dev 부트스트랩 자동화와 Keycloak 26 구축, 5월 13일 OKE 3단 업그레이드, 6월 19일 dev cron 컷오버, 6월 23일 ephemeral-storage 사태로 boot volume 100GB 상향">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: currentColor; }
+    .date { font-size: 13px; font-weight: 600; }
+    .desc { font-size: 12px; opacity: .75; }
+    .axis { stroke: currentColor; stroke-width: 1.5; opacity: .35; }
+    .dot { fill: currentColor; opacity: .8; }
+    .dot-hl { fill: #0969da; }
+  </style>
+
+  <line x1="96" y1="24" x2="96" y2="276" class="axis"/>
+
+  <circle cx="96" cy="30" r="4" class="dot"/>
+  <text x="86" y="27" text-anchor="end" class="date">4월 21일</text>
+  <text x="112" y="34" class="desc">ATS 설계 — 기존 서비스 이전은 별도 과제</text>
+
+  <circle cx="96" cy="72" r="4" class="dot-hl"/>
+  <text x="86" y="69" text-anchor="end" class="date">4월 27일</text>
+  <text x="112" y="76" class="desc">기존 테넌시 확장으로 전환, 리전 서울</text>
+
+  <circle cx="96" cy="114" r="4" class="dot"/>
+  <text x="86" y="111" text-anchor="end" class="date">5월 4일</text>
+  <text x="112" y="118" class="desc">설계 확정 — compartment 8개</text>
+
+  <circle cx="96" cy="156" r="4" class="dot"/>
+  <text x="86" y="153" text-anchor="end" class="date">5월 6~8일</text>
+  <text x="112" y="160" class="desc">dev 부트스트랩 자동화, Keycloak 26</text>
+
+  <circle cx="96" cy="198" r="4" class="dot"/>
+  <text x="86" y="195" text-anchor="end" class="date">5월 13일</text>
+  <text x="112" y="202" class="desc">OKE 3단 업그레이드 (1.33 → 1.35)</text>
+
+  <circle cx="96" cy="240" r="4" class="dot-hl"/>
+  <text x="86" y="237" text-anchor="end" class="date">6월 19일</text>
+  <text x="112" y="244" class="desc">dev cron 컷오버 — 기준 환경 전환</text>
+
+  <circle cx="96" cy="276" r="4" class="dot"/>
+  <text x="86" y="273" text-anchor="end" class="date">6월 23일</text>
+  <text x="112" y="280" class="desc">ephemeral-storage 사태 → boot 100GB</text>
+</svg>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 340" role="img" aria-label="EKS에서 OKE로 2편 타임라인: 7월 7일 plan이 클러스터 교체를 예고해 apply 보류, 7월 8일 인프라 전체 실측 다이어그램, 7월 13일 로그인 결함 3건 수정, 7월 21일부터 24일까지 비밀번호 정책과 세션 정합, 7월 22일 pod 슬롯 110 시도와 롤백, 7월 28일 readinessProbe 사고, 7월 29일 DNS 컷오버, 7월 30일부터 31일까지 인증서 마무리와 슬롯 만석 해소">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: currentColor; }
+    .date { font-size: 13px; font-weight: 600; }
+    .desc { font-size: 12px; opacity: .75; }
+    .axis { stroke: currentColor; stroke-width: 1.5; opacity: .35; }
+    .dot { fill: currentColor; opacity: .8; }
+    .dot-hl { fill: #0969da; }
+  </style>
+
+  <line x1="104" y1="24" x2="104" y2="316" class="axis"/>
+
+  <circle cx="104" cy="30" r="4" class="dot-hl"/>
+  <text x="94" y="27" text-anchor="end" class="date">7월 7일</text>
+  <text x="120" y="34" class="desc">plan이 클러스터 교체를 예고 — apply 보류</text>
+
+  <circle cx="104" cy="72" r="4" class="dot"/>
+  <text x="94" y="69" text-anchor="end" class="date">7월 8일</text>
+  <text x="120" y="76" class="desc">인프라 전체 실측 다이어그램</text>
+
+  <circle cx="104" cy="114" r="4" class="dot"/>
+  <text x="94" y="111" text-anchor="end" class="date">7월 13일</text>
+  <text x="120" y="118" class="desc">로그인 결함 3건 수정</text>
+
+  <circle cx="104" cy="156" r="4" class="dot"/>
+  <text x="94" y="153" text-anchor="end" class="date">7월 21~24일</text>
+  <text x="120" y="160" class="desc">비밀번호 정책·세션 정합</text>
+
+  <circle cx="104" cy="198" r="4" class="dot"/>
+  <text x="94" y="195" text-anchor="end" class="date">7월 22일</text>
+  <text x="120" y="202" class="desc">pod 슬롯 110 시도와 롤백</text>
+
+  <circle cx="104" cy="240" r="4" class="dot"/>
+  <text x="94" y="237" text-anchor="end" class="date">7월 28일</text>
+  <text x="120" y="244" class="desc">readinessProbe 사고</text>
+
+  <circle cx="104" cy="282" r="4" class="dot-hl"/>
+  <text x="94" y="279" text-anchor="end" class="date">7월 29일</text>
+  <text x="120" y="286" class="desc">DNS 컷오버</text>
+
+  <circle cx="104" cy="316" r="4" class="dot"/>
+  <text x="94" y="313" text-anchor="end" class="date">7월 30~31일</text>
+  <text x="120" y="320" class="desc">인증서 마무리, 슬롯 만석 해소</text>
+</svg>
