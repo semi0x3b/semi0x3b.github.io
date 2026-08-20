@@ -1,0 +1,134 @@
+# 원본: invoice_202602월_멋쟁이사자처럼01.pdf (28MB, billing-on.com 포털 보존)
+
+INVOICE
+고 객 사 멋쟁이사자처럼
+청구금액(VAT포함) ￦ 9,843,350
+ 
+고 객 사 멋쟁이사자처럼
+사용기간 2026년 01월
+청구일자 2026년 02월 10일
+납부기한 계약조건상의 결제일 이내
+계정별 사용 금액 적용 환율 : 1427.0
+AWS 계정 AWS 서비스 금액(USD) Credit (USD) 청구금액(USD) 청구금액(원)
+likelion.vn@likelion.net
+(121942292331)
+Elastic Load Balancing $ 39.14 $ 0 $ 39.14 ￦ 55,853
+Data Transfer $ 18.18 $ 0 $ 18.18 ￦ 25,943
+AmazonWorkMail $ 12 $ 0 $ 12 ￦ 17,124
+AmazonCloudWatch $ 3.28 $ 0 $ 3.28 ￦ 4,681
+Amazon Virtual Private Cloud $ 56.24 $ 0 $ 56.24 ￦ 80,254
+Amazon Simple Storage Service $ 0.07 $ 0 $ 0.07 ￦ 100
+Amazon Route 53 $ 0.21 $ 0 $ 0.21 ￦ 300
+Amazon Relational Database Service $ 348.45 $ 0 $ 348.45 ￦ 497,238
+Amazon Elastic Compute Cloud $ 383.99 $ 0 $ 383.99 ￦ 547,954
+Amazon CloudFront $ 0 $ 0 $ 0 ￦ 0
+AWS WAF $ 8 $ 0 $ 8 ￦ 11,416
+AWS Secrets Manager $ 0.4 $ 0 $ 0.4 ￦ 571
+AWS Amplify $ 0.01 $ 0 $ 0.01 ￦ 14
+FIVECLOUD Service $ -52.2 $ 0 $ -52.2 ￦ -74,489
+Sub Total $ 817.77 $ 0 $ 817.77 ￦ 1,166,958
+dev+aws-stg@likelion.net
+(125766221427)
+Elastic Load Balancing $ 516.02 $ 0 $ 516.02 ￦ 736,361
+Data Transfer $ 256.35 $ 0 $ 256.35 ￦ 365,811
+AmazonCloudWatch $ 273.71 $ 0 $ 273.71 ￦ 390,584
+Amazon Virtual Private Cloud $ 360.97 $ 0 $ 360.97 ￦ 515,104
+Amazon Simple Storage Service $ 99.88 $ 0 $ 99.88 ￦ 142,529
+Amazon Simple Queue Service $ 0.08 $ 0 $ 0.08 ￦ 114
+Amazon Simple Notification Service $ 0 $ 0 $ 0 ￦ 0
+Amazon Simple Email Service $ 0 $ 0 $ 0 ￦ 0
+Amazon Route 53 $ 3.54 $ 0 $ 3.54 ￦ 5,052
+Amazon Relational Database Service $ 990.66 $ 0 $ 990.66 ￦ 1,413,672
+Amazon GuardDuty $ 1.94 $ 0 $ 1.94 ￦ 2,768
+Amazon Elastic Container Service for Kubernetes $ 148.8 $ 0 $ 148.8 ￦ 212,338
+Amazon Elastic Compute Cloud $ 1,624.19 $ 0 $ 1,624.19 ￦ 2,317,719
+Amazon EC2 Container Registry (ECR) $ 133.06 $ 0 $ 133.06 ￦ 189,877
+Amazon DynamoDB $ 0.9 $ 0 $ 0.9 ￦ 1,284
+Amazon CloudFront $ 487.58 $ 0 $ 487.58 ￦ 695,777
+Amazon API Gateway $ 0 $ 0 $ 0 ￦ 0
+AWS Systems Manager $ 2.35 $ 0 $ 2.35 ￦ 3,353
+AWS Security Hub $ 188.55 $ 0 $ 188.55 ￦ 269,061
+AWS Secrets Manager $ 6.9 $ 0 $ 6.9 ￦ 9,846
+AWS Lambda $ 0 $ 0 $ 0 ￦ 0
+AWS Key Management Service $ 1.02 $ 0 $ 1.02 ￦ 1,456
+AWS Amplify $ 0 $ 0 $ 0 ￦ 0
+FIVECLOUD Service $ -305.79 $ 0 $ -305.79 ￦ -436,362
+Sub Total $ 4,790.71 $ 0 $ 4,790.71 ￦ 6,836,343
+aws.server@likelion.net
+(541769027173)
+Elastic Load Balancing $ 53.94 $ 0 $ 53.94 ￦ 76,972
+Data Transfer $ 0.48 $ 0 $ 0.48 ￦ 685
+AmazonCloudWatch $ 0.48 $ 0 $ 0.48 ￦ 685
+Amazon Virtual Private Cloud $ 29.77 $ 0 $ 29.77 ￦ 42,482
+Amazon Simple Storage Service $ 3.15 $ 0 $ 3.15 ￦ 4,495
+Amazon Simple Queue Service $ 0 $ 0 $ 0 ￦ 0
+Amazon Simple Notification Service $ 0 $ 0 $ 0 ￦ 0
+Amazon Simple Email Service $ 0.16 $ 0 $ 0.16 ￦ 228
+Amazon Route 53 $ 0.6 $ 0 $ 0.6 ￦ 856
+Amazon Relational Database Service $ 167.25 $ 0 $ 167.25 ￦ 238,666
+Amazon Registrar $ 86 $ 0 $ 86 ￦ 122,722
+Amazon Elastic Compute Cloud $ 47.2 $ 0 $ 47.2 ￦ 67,354
+Amazon EC2 Container Registry (ECR) $ 0.02 $ 0 $ 0.02 ￦ 29
+Amazon CloudFront $ 0.06 $ 0 $ 0.06 ￦ 86
+Amazon API Gateway $ 0.03 $ 0 $ 0.03 ￦ 43
+AWS X-Ray $ 0.35 $ 0 $ 0.35 ￦ 499
+AWS Secrets Manager $ 4.83 $ 0 $ 4.83 ￦ 6,892
+AWS Lambda $ 0.22 $ 0 $ 0.22 ￦ 314
+AWS Key Management Service $ 0 $ 0 $ 0 ￦ 0
+AWS Glue $ 0 $ 0 $ 0 ￦ 0
+AWS Config $ 0.17 $ 0 $ 0.17 ￦ 243
+FIVECLOUD Service $ -23.68 $ 0 $ -23.68 ￦ -33,791
+Sub Total $ 371.03 $ 0 $ 371.03 ￦ 529,460
+codelion-dev@likelion.net
+(899864473854)
+Data Transfer $ 0.12 $ 0 $ 0.12 ￦ 171
+AmazonCloudWatch $ 35.99 $ 0 $ 35.99 ￦ 51,358
+Amazon Virtual Private Cloud $ 44.64 $ 0 $ 44.64 ￦ 63,701
+Amazon Simple Storage Service $ 4.38 $ 0 $ 4.38 ￦ 6,250
+Amazon Simple Queue Service $ 0.24 $ 0 $ 0.24 ￦ 342
+Amazon Simple Notification Service $ 0 $ 0 $ 0 ￦ 0
+Amazon Route 53 $ 0.84 $ 0 $ 0.84 ￦ 1,199
+Amazon Relational Database Service $ 50.39 $ 0 $ 50.39 ￦ 71,907
+Amazon Elastic Compute Cloud $ 0.96 $ 0 $ 0.96 ￦ 1,370
+Amazon EC2 Container Registry (ECR) $ 2.75 $ 0 $ 2.75 ￦ 3,924
+Amazon DynamoDB $ 12.2 $ 0 $ 12.2 ￦ 17,409
+Amazon API Gateway $ 0 $ 0 $ 0 ￦ 0
+AWS X-Ray $ 0 $ 0 $ 0 ￦ 0
+AWS Systems Manager $ 0 $ 0 $ 0 ￦ 0
+AWS Secrets Manager $ 6 $ 0 $ 6 ￦ 8,562
+AWS Lambda $ 0.58 $ 0 $ 0.58 ￦ 828
+AWS Key Management Service $ 4.05 $ 0 $ 4.05 ￦ 5,779
+AWS Glue $ 0 $ 0 $ 0 ￦ 0
+AWS End User Messaging $ 1 $ 0 $ 1 ￦ 1,427
+AWS Config $ 0.04 $ 0 $ 0.04 ￦ 57
+AWS Amplify $ 0.01 $ 0 $ 0.01 ￦ 14
+FIVECLOUD Service $ -9.85 $ 0 $ -9.85 ￦ -14,056
+Sub Total $ 154.34 $ 0 $ 154.34 ￦ 220,243
+works@likelion.net
+(945802847880)
+Elastic Load Balancing $ 16.75 $ 0 $ 16.75 ￦ 23,902
+Data Transfer $ 0.49 $ 0 $ 0.49 ￦ 699
+AmazonCloudWatch $ 0 $ 0 $ 0 ￦ 0
+Amazon Virtual Private Cloud $ 22.33 $ 0 $ 22.33 ￦ 31,865
+Amazon Simple Storage Service $ 0.04 $ 0 $ 0.04 ￦ 57
+Amazon Relational Database Service $ 2.16 $ 0 $ 2.16 ￦ 3,082
+Amazon Elastic Compute Cloud $ 103.79 $ 0 $ 103.79 ￦ 148,108
+AWS Secrets Manager $ 0.4 $ 0 $ 0.4 ￦ 571
+AWS Lambda $ 0.01 $ 0 $ 0.01 ￦ 14
+FIVECLOUD Service $ -8.76 $ 0 $ -8.76 ￦ -12,501
+Sub Total $ 137.21 $ 0 $ 137.21 ￦ 195,799
+전체합계 $ 6,271.06 $ 6,271.06 ￦ 8,948,500
+ 
+청구 상세
+결제 금액 $ 6,270.85
+원화 청구 금액 ￦ 8,948,500
+공급가액 ￦ 8,948,500
+부가세 ￦ 894,850
+납부 총 금액 ￦ 9,843,350
+ 
+ 
+ 
+패스트파이브(주)
+서울특별시 서초구 남부순환로333길 10, 1층(101호), 2,3층(서초동, 원일빌딩)
+[입금계좌] 신한은행  
+ 
