@@ -9,8 +9,8 @@
     .zone { fill: none; stroke: currentColor; stroke-width: 1; stroke-dasharray: 4 3; rx: 8; opacity: .3; }
     .zone-lbl { font-size: 11px; font-weight: 600; opacity: .5; }
     .box { fill: none; stroke: currentColor; stroke-width: 1.5; rx: 6; opacity: .55; }
-    .box-hot { fill: none; stroke: #bc4c00; stroke-width: 2; rx: 6; }
-    .hot-txt { fill: #bc4c00; font-size: 11px; }
+    .box-hot { fill: none; stroke: #e8590c; stroke-width: 2; rx: 6; }
+    .hot-txt { fill: #e8590c; font-size: 11px; }
     .flow { stroke: currentColor; stroke-width: 1.5; fill: none; opacity: .6; }
   </style>
   <defs>

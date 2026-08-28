@@ -9,17 +9,17 @@
     .zone { fill: none; stroke: currentColor; stroke-width: 1; stroke-dasharray: 4 3; rx: 8; opacity: .3; }
     .zone-lbl { font-size: 11px; font-weight: 600; opacity: .5; }
     .box { fill: none; stroke: currentColor; stroke-width: 1.5; rx: 6; opacity: .55; }
-    .box-kong { fill: none; stroke: #1f883d; stroke-width: 2; rx: 6; }
-    .box-auth { fill: none; stroke: #9a6700; stroke-width: 1.6; rx: 6; }
-    .box-data { fill: none; stroke: #0969da; stroke-width: 1.6; rx: 6; }
+    .box-kong { fill: none; stroke: #5a8c6e; stroke-width: 2; rx: 6; }
+    .box-auth { fill: none; stroke: #c98a3d; stroke-width: 1.6; rx: 6; }
+    .box-data { fill: none; stroke: #43809c; stroke-width: 1.6; rx: 6; }
     .flow { stroke: currentColor; stroke-width: 1.6; fill: none; opacity: .6; }
-    .flow-auth { stroke: #9a6700; stroke-width: 1.4; fill: none; }
-    .flow-data { stroke: #0969da; stroke-width: 1.2; fill: none; stroke-dasharray: 3 2; opacity: .8; }
-    .auth-lbl { font-size: 11px; fill: #9a6700; }
+    .flow-auth { stroke: #c98a3d; stroke-width: 1.4; fill: none; }
+    .flow-data { stroke: #43809c; stroke-width: 1.2; fill: none; stroke-dasharray: 3 2; opacity: .8; }
+    .auth-lbl { font-size: 11px; fill: #c98a3d; }
   </style>
   <defs>
     <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker>
-    <marker id="ah-auth" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#9a6700"/></marker>
+    <marker id="ah-auth" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c98a3d"/></marker>
   </defs>
 
   <ellipse cx="76" cy="38" rx="64" ry="26" class="box"/>

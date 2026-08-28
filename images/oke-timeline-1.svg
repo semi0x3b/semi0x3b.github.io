@@ -5,7 +5,7 @@
     .desc { font-size: 12px; opacity: .75; }
     .axis { stroke: currentColor; stroke-width: 1.5; opacity: .35; }
     .dot { fill: currentColor; opacity: .8; }
-    .dot-hl { fill: #0969da; }
+    .dot-hl { fill: #43809c; }
   </style>
 
   <line x1="96" y1="24" x2="96" y2="276" class="axis"/>

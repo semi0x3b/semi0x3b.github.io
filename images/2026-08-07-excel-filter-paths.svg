@@ -9,15 +9,15 @@
     .zone { fill: none; stroke: currentColor; stroke-width: 1; stroke-dasharray: 4 3; rx: 8; opacity: .3; }
     .zone-lbl { font-size: 11px; font-weight: 600; opacity: .5; }
     .box { fill: none; stroke: currentColor; stroke-width: 1.5; rx: 6; opacity: .55; }
-    .box-lost { fill: none; stroke: #cf222e; stroke-width: 1.8; rx: 6; }
+    .box-lost { fill: none; stroke: #c24634; stroke-width: 1.8; rx: 6; }
     .flow { stroke: currentColor; stroke-width: 1.6; fill: none; opacity: .6; }
-    .flow-lost { stroke: #cf222e; stroke-width: 1.6; fill: none; }
-    .lost-lbl { font-size: 11px; fill: #cf222e; }
-    .lost-num { font-size: 13px; font-weight: 700; fill: #cf222e; }
+    .flow-lost { stroke: #c24634; stroke-width: 1.6; fill: none; }
+    .lost-lbl { font-size: 11px; fill: #c24634; }
+    .lost-num { font-size: 13px; font-weight: 700; fill: #c24634; }
   </style>
   <defs>
     <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker>
-    <marker id="ah-lost" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#cf222e"/></marker>
+    <marker id="ah-lost" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c24634"/></marker>
   </defs>
 
   <rect x="300" y="20" width="220" height="52" class="box"/>

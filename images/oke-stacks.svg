@@ -5,7 +5,7 @@
     .sub { font-size: 11px; opacity: .7; }
     .edge-lbl { font-size: 11px; opacity: .7; }
     .box { fill: none; stroke: currentColor; stroke-width: 1.5; rx: 6; opacity: .55; }
-    .box-base { fill: none; stroke: #0969da; stroke-width: 2; rx: 6; }
+    .box-base { fill: none; stroke: #43809c; stroke-width: 2; rx: 6; }
     .flow { stroke: currentColor; stroke-width: 1.5; fill: none; opacity: .6; }
   </style>
   <defs>

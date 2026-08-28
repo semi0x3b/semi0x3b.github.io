@@ -6,15 +6,15 @@
     .sub { font-size: 11px; opacity: .7; }
     .edge-lbl { font-size: 11px; opacity: .7; }
     .box { fill: none; stroke: currentColor; stroke-width: 1.5; rx: 6; opacity: .55; }
-    .box-bad { fill: none; stroke: #cf222e; stroke-width: 1.8; rx: 6; }
-    .bad-lbl { font-size: 11px; fill: #cf222e; }
-    .bad-txt { font-size: 13px; font-weight: 600; fill: #cf222e; }
+    .box-bad { fill: none; stroke: #c24634; stroke-width: 1.8; rx: 6; }
+    .bad-lbl { font-size: 11px; fill: #c24634; }
+    .bad-txt { font-size: 13px; font-weight: 600; fill: #c24634; }
     .flow { stroke: currentColor; stroke-width: 1.6; fill: none; opacity: .6; }
-    .flow-bad { stroke: #cf222e; stroke-width: 1.6; fill: none; }
+    .flow-bad { stroke: #c24634; stroke-width: 1.6; fill: none; }
   </style>
   <defs>
     <marker id="p-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker>
-    <marker id="p-ah-bad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#cf222e"/></marker>
+    <marker id="p-ah-bad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c24634"/></marker>
   </defs>
 
   <rect x="20" y="106" width="170" height="60" class="box"/>
