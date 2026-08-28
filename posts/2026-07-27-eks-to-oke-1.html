@@ -8,7 +8,7 @@
 <h2 id="어디에-지을지부터-정했다">어디에 지을지부터 정했다<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#어디에-지을지부터-정했다" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
 <p>OCI에는 테넌시라는 최상위 계정 단위가 있어요. AWS 계정 하나에 해당해요. 처음에는 테넌시를 새로 만드는 안으로 잡았다가, 6일 만에 기존 테넌시를 확장하는 쪽으로 방향을 바꿨어요. 리전도 춘천(ap-chuncheon-1)에서 서울(ap-seoul-1)로 함께 옮겼고요. 이때 작성해뒀던 dev용 oke.tf와 vcn.tf를 걷어내고, 당분간은 기존에 돌아가던 클러스터를 참조하는 구조로 갔어요. 이 선택이 뒤에 state를 다시 채워야 하는 일로 이어져요.</p>
 <p>컨테이너 레지스트리나 메일 발송처럼 환경과 무관한 자원은 _common compartment로 분리했어요. compartment는 테넌시 안에서 리소스를 묶어 격리하는 논리 단위예요. 폴더에 가까워요.</p>
-<p>최종 설계는 테넌시 하나에 리전은 서울, compartment 8개(환경별 axp-dev/common/prod + 서비스별 분리), 예산은 월 $1,000에 70/90/100% 알림으로 정리됐어요.</p>
+<p>최종 설계는 테넌시 하나에 리전은 서울, compartment 8개(환경별 셋 + 서비스별 분리), 예산은 월 $1,000에 70/90/100% 알림으로 정리됐어요.</p>
 <h2 id="dev-클러스터는-이렇게-구성했어요">dev 클러스터는 이렇게 구성했어요<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#dev-클러스터는-이렇게-구성했어요" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
 <p>네트워크는 VCN 하나(<code>10.0.0.0/16</code>)에 용도별 서브넷 넷을 뒀어요.</p>
 <p><img src=".././images/oke-network.svg" alt="dev 클러스터 네트워크 구성"/></p>
@@ -21,11 +21,11 @@
 </ul>
 <p>Terraform 스택은 용도별로 여섯 개로 나눴어요. 하나의 거대한 state를 만들지 않으려는 의도였는데, 결과적으로 prod에서 스택 하나의 변수 파일이 어긋났을 때 피해 범위가 그 스택에 갇히는 효과도 있었어요.</p>
 <p><img src=".././images/oke-stacks.svg" alt="Terraform 스택 구조"/></p>
-<p>클러스터 안은 이렇게 채웠어요. 하나의 클러스터에 서비스군 다섯 개(likelion 31종, ats·lionhub 각 7종, saas·campfire 각 8종)가 네임스페이스로 갈려 들어가요.</p>
+<p>클러스터 안은 이렇게 채웠어요. 하나의 클러스터에 서비스군 다섯 개가 네임스페이스로 갈려 들어가요. 가장 큰 곳이 31종이고 나머지는 7~8종씩이에요.</p>
 <p><img src=".././images/oke-traffic-path.svg" alt="OKE 클러스터 트래픽 경로"/></p>
 <p>Kong은 기본 이미지가 아니라 <code>oauth2-token-introspection-request</code>, <code>keycloak-auth-request</code> 플러그인을 번들한 커스텀 빌드를 써요. 인증을 각 서비스가 따로 하지 않고 게이트웨이에서 한 번에 처리하려는 구성이라, Ingress에 KongPlugin을 붙이면 그 경로로 들어온 요청은 Keycloak 검증을 거쳐야 서비스에 닿아요.</p>
-<p>캐시는 서비스군마다 전용 Redis를 뒀어요(Bitnami 차트, Redis 7.4). 하나를 공유하면 관리는 편하지만 한 서비스군의 캐시 폭주가 전체로 번지니까, 처음부터 <code>likelion-cache</code>·<code>ats-cache</code>·<code>saas-cache</code>로 갈랐어요. campfire는 성격이 달라서 자체 Redis와 PgBouncer를 따로 두고요.</p>
-<p>배치 작업도 요청 경로와 분리했어요. likelion의 <code>cronjob</code>, ats의 <code>ats-scheduler</code>, saas의 <code>saas-admin-job</code>, lionhub의 <code>lionhub-job</code>이 각자 스케줄로 도는데, 이게 나중에 dev 컷오버에서 중요해져요. 같은 배치가 EKS와 OKE 양쪽에서 동시에 돌면 쿠폰이 두 번 발급되거든요.</p>
+<p>캐시는 서비스군마다 전용 Redis를 뒀어요(Bitnami 차트, Redis 7.4). 하나를 공유하면 관리는 편하지만 한 서비스군의 캐시 폭주가 전체로 번지니까, 처음부터 서비스군별 캐시로 갈랐어요. 성격이 다른 한 곳은 자체 Redis와 PgBouncer를 따로 두고요.</p>
+<p>배치 작업도 요청 경로와 분리했어요. 서비스군마다 배치 잡이 하나씩 각자 스케줄로 도는데, 이게 나중에 dev 컷오버에서 중요해져요. 같은 배치가 EKS와 OKE 양쪽에서 동시에 돌면 쿠폰이 두 번 발급되거든요.</p>
 <p>여기서 함정을 하나 밟았어요. 기존 Kong이 이미 <code>ingressClass: kong</code>을 쓰고 있어서, dev Kong을 같은 이름으로 띄우면 두 Kong이 같은 Ingress를 서로 가져가려고 해요. dev는 <code>kong-likelion-dev</code>로 분리하고 CRD 설치도 껐어요(기존 Kong이 설치해둔 것을 공유). 클러스터가 갈려도 Ingress 클래스는 이름 하나로 충돌할 수 있다는 걸 여기서 배웠어요.</p>
 <p>배포와 비밀값 쪽은 이렇게 돌아가요.</p>
 <p><img src=".././images/oke-gitops.svg" alt="배포와 비밀값 파이프라인"/></p>
