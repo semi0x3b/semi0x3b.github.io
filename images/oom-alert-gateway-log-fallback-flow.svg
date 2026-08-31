@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 195" role="img" aria-label="OOM 알림은 먼저 앱 로그에서 마지막 요청을 찾고, 요청이 한 건도 없을 때만 게이트웨이 로그로 넘어가 5xx와 업스트림 끊김을 먼저 뽑은 뒤 슬랙으로 보낸다" style="max-width:100%;height:auto">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="currentColor"/>
+    </marker>
+    <marker id="ar-x" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#e8590c"/>
+    </marker>
+  </defs>
+
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="16" y="70" width="110" height="46" rx="6"/>
+    <rect x="196" y="70" width="130" height="46" rx="6"/>
+    <rect x="600" y="70" width="84" height="46" rx="6"/>
+  </g>
+  <rect x="396" y="70" width="150" height="46" rx="6" fill="none" stroke="#e8590c" stroke-width="1.5"/>
+
+  <g font-size="13" text-anchor="middle" fill="currentColor">
+    <text x="71" y="98">OOM 알림 수신</text>
+    <text x="261" y="98">앱 로그 조회</text>
+    <text x="642" y="98">슬랙 발송</text>
+  </g>
+  <text x="471" y="98" font-size="13" text-anchor="middle" fill="#e8590c" font-weight="600">게이트웨이 로그 조회</text>
+
+  <g stroke="currentColor" stroke-width="1.5" fill="none">
+    <line x1="126" y1="93" x2="190" y2="93" marker-end="url(#ar)"/>
+    <line x1="546" y1="93" x2="594" y2="93" marker-end="url(#ar)"/>
+    <polyline points="261,70 261,34 642,34 642,64" marker-end="url(#ar)"/>
+  </g>
+  <line x1="326" y1="93" x2="390" y2="93" stroke="#e8590c" stroke-width="1.5" fill="none" marker-end="url(#ar-x)"/>
+
+  <g font-size="11" text-anchor="middle" fill="currentColor" opacity=".7">
+    <text x="158" y="86">파드 이름으로</text>
+    <text x="570" y="86">발송</text>
+    <text x="450" y="27">요청을 찾았으면 곧바로</text>
+  </g>
+  <text x="358" y="86" font-size="11" text-anchor="middle" fill="#e8590c">요청 0건이면</text>
+
+  <g font-size="11" text-anchor="middle" fill="currentColor" opacity=".6">
+    <text x="261" y="140">이 앱은 요청을 표준출력에</text>
+    <text x="261" y="156">남기지 않아 늘 0건</text>
+    <text x="471" y="140">5xx·업스트림 끊김을</text>
+    <text x="471" y="156">별도 쿼리로 먼저</text>
+    <text x="471" y="172">파드 구분은 안 돼 서비스 단위 근사</text>
+  </g>
+</svg>
