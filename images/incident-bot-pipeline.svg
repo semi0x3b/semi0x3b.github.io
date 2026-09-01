@@ -1,0 +1,128 @@
+<svg viewBox="0 0 960 480" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="알림이 웹훅으로 들어오면 규칙 코드가 신호 추출과 판정을 마친 뒤에야 LLM이 해석하고, 인용 기계 검증을 통과한 결과만 슬랙으로 나간다. 발송은 노션 장부 상태에 따라 신규·지속·회귀 세 갈래로 갈린다">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+    <marker id="arrA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#d97706"/>
+    </marker>
+  </defs>
+
+  <!-- 수신 -->
+  <g fill="none" stroke="currentColor" stroke-width="1.4">
+    <rect x="16" y="52" width="150" height="96" rx="8"/>
+  </g>
+  <g fill="currentColor" font-family="sans-serif">
+    <text x="91" y="76" font-size="13" font-weight="600" text-anchor="middle">알림 웹훅 수신</text>
+    <text x="91" y="98" font-size="11" opacity=".7" text-anchor="middle">수신 즉시 응답하고</text>
+    <text x="91" y="114" font-size="11" opacity=".7" text-anchor="middle">분석은 대기열로 —</text>
+    <text x="91" y="130" font-size="11" opacity=".7" text-anchor="middle">분석이 수신을 안 막게</text>
+  </g>
+
+  <!-- 규칙층 묶음 -->
+  <rect x="196" y="24" width="330" height="152" rx="10" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 3" opacity=".5"/>
+  <text x="206" y="16" font-size="11" fill="currentColor" opacity=".6" font-family="sans-serif">규칙 코드 구간 — LLM 미개입, 같은 입력이면 같은 결과</text>
+  <g fill="none" stroke="currentColor" stroke-width="1.4">
+    <rect x="212" y="52" width="140" height="96" rx="8"/>
+    <rect x="372" y="52" width="140" height="96" rx="8"/>
+  </g>
+  <g fill="currentColor" font-family="sans-serif">
+    <text x="282" y="76" font-size="13" font-weight="600" text-anchor="middle">신호 추출</text>
+    <text x="282" y="98" font-size="11" opacity=".7" text-anchor="middle">로그 저장소 조회</text>
+    <text x="282" y="114" font-size="11" opacity=".7" text-anchor="middle">에러·전후 문맥 수집</text>
+    <text x="282" y="130" font-size="11" opacity=".7" text-anchor="middle">에러 지문화·출처 태그</text>
+
+    <text x="442" y="76" font-size="13" font-weight="600" text-anchor="middle">판정</text>
+    <text x="442" y="98" font-size="11" opacity=".7" text-anchor="middle">"고칠 수 있는가"는</text>
+    <text x="442" y="114" font-size="11" opacity=".7" text-anchor="middle">알림 이름 규칙이 결정</text>
+    <text x="442" y="130" font-size="11" opacity=".7" text-anchor="middle">LLM에 묻지 않음</text>
+  </g>
+
+  <!-- LLM -->
+  <g fill="none" stroke="currentColor" stroke-width="2.2">
+    <rect x="556" y="52" width="150" height="96" rx="8"/>
+  </g>
+  <g fill="currentColor" font-family="sans-serif">
+    <text x="631" y="76" font-size="13" font-weight="600" text-anchor="middle">LLM 해석</text>
+    <text x="631" y="98" font-size="11" opacity=".7" text-anchor="middle">마스킹된 신호만 입력</text>
+    <text x="631" y="114" font-size="11" opacity=".7" text-anchor="middle">고정 JSON 스키마</text>
+    <text x="631" y="130" font-size="11" opacity=".7" text-anchor="middle">시간당 상한, 실패 시 생략</text>
+  </g>
+
+  <!-- 검증 게이트 -->
+  <g fill="none" stroke="#d97706" stroke-width="1.8">
+    <rect x="746" y="52" width="198" height="96" rx="8"/>
+  </g>
+  <g font-family="sans-serif">
+    <text x="845" y="76" font-size="13" font-weight="600" text-anchor="middle" fill="#d97706">인용 기계 검증</text>
+    <text x="845" y="98" font-size="11" opacity=".7" text-anchor="middle" fill="currentColor">인용이 입력 원문에 실재?</text>
+    <text x="845" y="114" font-size="11" opacity=".7" text-anchor="middle" fill="currentColor">최소 15자(우연 매칭 차단)</text>
+    <text x="845" y="130" font-size="11" opacity=".7" text-anchor="middle" fill="currentColor">없으면 폐기 + 폐기 표기</text>
+  </g>
+
+  <!-- 상단 흐름 화살표 -->
+  <g stroke="currentColor" stroke-width="1.4" marker-end="url(#arr)">
+    <line x1="166" y1="100" x2="208" y2="100"/>
+    <line x1="352" y1="100" x2="368" y2="100"/>
+    <line x1="512" y1="100" x2="552" y2="100"/>
+  </g>
+  <g stroke="#d97706" stroke-width="1.8" marker-end="url(#arrA)">
+    <line x1="706" y1="100" x2="742" y2="100"/>
+  </g>
+
+  <!-- 발송 분기 -->
+  <g stroke="#d97706" stroke-width="1.8" fill="none" marker-end="url(#arrA)">
+    <path d="M 845 148 L 845 196"/>
+  </g>
+  <text x="853" y="178" font-size="11" fill="currentColor" opacity=".7" font-family="sans-serif">통과분만</text>
+
+  <g fill="none" stroke="currentColor" stroke-width="1.4">
+    <rect x="380" y="200" width="560" height="64" rx="8"/>
+  </g>
+  <g fill="currentColor" font-family="sans-serif">
+    <text x="660" y="224" font-size="13" font-weight="600" text-anchor="middle">발송 분기 — 이 지문을 전에 봤는가, 사람이 어떤 상태로 뒀는가</text>
+    <text x="660" y="246" font-size="11" opacity=".7" text-anchor="middle">노션 장부에서 지문 조회 (누적 횟수 · 스레드 위치 · 상태 칼럼)</text>
+  </g>
+
+  <g stroke="currentColor" stroke-width="1.4" fill="none" marker-end="url(#arr)">
+    <path d="M 470 264 L 470 312"/>
+    <path d="M 660 264 L 660 312"/>
+    <path d="M 850 264 L 850 312"/>
+  </g>
+
+  <g fill="none" stroke="currentColor" stroke-width="1.4">
+    <rect x="380" y="316" width="180" height="102" rx="8"/>
+    <rect x="580" y="316" width="180" height="102" rx="8"/>
+    <rect x="780" y="316" width="164" height="102" rx="8"/>
+  </g>
+  <g fill="currentColor" font-family="sans-serif">
+    <text x="470" y="340" font-size="13" font-weight="600" text-anchor="middle">처음 보는 지문</text>
+    <text x="470" y="362" font-size="11" opacity=".7" text-anchor="middle">새 메시지 + 담당 멘션</text>
+    <text x="470" y="378" font-size="11" opacity=".7" text-anchor="middle">분석 전문은 스레드 댓글</text>
+    <text x="470" y="394" font-size="11" opacity=".7" text-anchor="middle">장부에 지문·스레드 기록</text>
+
+    <text x="670" y="340" font-size="13" font-weight="600" text-anchor="middle">계속 나는 중</text>
+    <text x="670" y="362" font-size="11" opacity=".7" text-anchor="middle">스레드에 카운트 한 줄만</text>
+    <text x="670" y="378" font-size="11" opacity=".7" text-anchor="middle">LLM·조회 없음, 채널 무음</text>
+    <text x="670" y="394" font-size="11" opacity=".7" text-anchor="middle">간격: 보통 30분·급증 5분</text>
+
+    <text x="862" y="340" font-size="13" font-weight="600" text-anchor="middle">해결 후 재발</text>
+    <text x="862" y="362" font-size="11" opacity=".7" text-anchor="middle">회귀로 승격</text>
+    <text x="862" y="378" font-size="11" opacity=".7" text-anchor="middle">풀 분석 + 멘션 재발송</text>
+    <text x="862" y="394" font-size="11" opacity=".7" text-anchor="middle">상태는 "재발"로 되돌림</text>
+  </g>
+
+  <!-- 사람 피드백 루프 -->
+  <g stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4" fill="none" marker-end="url(#arr)">
+    <path d="M 360 366 L 300 366 L 300 250 L 376 250"/>
+  </g>
+  <g fill="currentColor" font-family="sans-serif" font-size="11" opacity=".7">
+    <text x="212" y="352">사람이 장부 상태를 바꾸면</text>
+    <text x="212" y="368">("해결" 처리 등) 다음 알림의</text>
+    <text x="212" y="384">분기가 달라진다 —</text>
+    <text x="212" y="400">알림을 계속 받을지는 사람이 정한다</text>
+  </g>
+
+  <text x="480" y="456" font-size="11" fill="currentColor" opacity=".55" font-family="sans-serif" text-anchor="middle">봇에는 운영 환경을 바꿀 권한이 없다 — 재시작·복구는 쿠버네티스(probe) 소관으로 분리</text>
+</svg>
