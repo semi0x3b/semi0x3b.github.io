@@ -1,0 +1,66 @@
+<svg viewBox="0 0 960 300" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="슬랙 질문은 서비스 묶음 선택, 탐색 에이전트, 답 쓰기를 차례로 거쳐 슬랙 답변이 된다. 탐색 에이전트에 주는 도구는 파일 읽기·문자열 검색·파일 찾기 셋뿐이고, 각주 규칙은 답 쓰기 단계의 프롬프트에 있으며, 캐시 키는 묶음에 든 레포들의 커밋 해시다">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+    <marker id="arrA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#d97706"/>
+    </marker>
+  </defs>
+
+  <g fill="none" stroke="currentColor" stroke-width="1.4">
+    <rect x="16"  y="60" width="196" height="112" rx="8"/>
+    <rect x="262" y="60" width="196" height="112" rx="8"/>
+    <rect x="508" y="60" width="196" height="112" rx="8"/>
+  </g>
+  <rect x="754" y="60" width="190" height="112" rx="8" fill="none" stroke="#d97706" stroke-width="1.6"/>
+
+  <g fill="currentColor" font-family="sans-serif" text-anchor="middle">
+    <text x="114" y="86" font-size="13" font-weight="600">서비스 묶음 선택</text>
+    <text x="114" y="108" font-size="11" opacity=".7">질문 앞에 서비스 이름을 붙이면</text>
+    <text x="114" y="124" font-size="11" opacity=".7">프론트·백엔드·기획 문서</text>
+    <text x="114" y="140" font-size="11" opacity=".7">레포를 한 묶음으로</text>
+    <text x="114" y="156" font-size="11" opacity=".7">(묶음 8개, 레포 29개)</text>
+
+    <text x="360" y="86" font-size="13" font-weight="600">탐색 에이전트</text>
+    <text x="360" y="108" font-size="11" opacity=".7">도구는 셋뿐 — 파일 읽기,</text>
+    <text x="360" y="124" font-size="11" opacity=".7">문자열 검색, 파일 찾기</text>
+    <text x="360" y="140" font-size="11" opacity=".7">레포마다 확인함/미확인을 적고</text>
+    <text x="360" y="156" font-size="11" opacity=".7">미확인 레포만 한 번 더 돈다</text>
+
+    <text x="606" y="86" font-size="13" font-weight="600">답 쓰기</text>
+    <text x="606" y="108" font-size="11" opacity=".7">HOW 불릿 + 각주 번호,</text>
+    <text x="606" y="124" font-size="11" opacity=".7">WHY는 근거 있을 때만</text>
+    <text x="606" y="140" font-size="11" opacity=".7">각주 규칙: 구체값은</text>
+    <text x="606" y="156" font-size="11" opacity=".7">인용한 줄에 실제로 보여야</text>
+
+    <text x="849" y="86" font-size="13" font-weight="600" fill="#d97706">슬랙 답변</text>
+    <text x="849" y="108" font-size="11" opacity=".7">근거 목록은 스레드로</text>
+    <text x="849" y="124" font-size="11" opacity=".7">검색 범위·미확인 레포는</text>
+    <text x="849" y="140" font-size="11" opacity=".7">답변 밑 한 줄로</text>
+    <text x="849" y="156" font-size="11" opacity=".7">👍/👎 판정 버튼</text>
+  </g>
+
+  <g stroke="currentColor" stroke-width="1.4" fill="none" marker-end="url(#arr)">
+    <line x1="212" y1="116" x2="260" y2="116"/>
+    <line x1="458" y1="116" x2="506" y2="116"/>
+  </g>
+  <line x1="704" y1="116" x2="752" y2="116" stroke="#d97706" stroke-width="1.4" fill="none" marker-end="url(#arrA)"/>
+  <g fill="currentColor" font-family="sans-serif" font-size="11" opacity=".7" text-anchor="middle">
+    <text x="236" y="106">레포 목록</text>
+    <text x="482" y="106">근거 목록</text>
+    <text x="728" y="106" fill="#d97706" opacity="1">답변</text>
+  </g>
+
+  <rect x="262" y="220" width="442" height="60" rx="8" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 3" opacity=".6"/>
+  <g fill="currentColor" font-family="sans-serif" text-anchor="middle">
+    <text x="483" y="244" font-size="13" font-weight="600">답변 캐시</text>
+    <text x="483" y="264" font-size="11" opacity=".7">키 = 묶음에 든 레포들의 커밋 해시. 어느 레포든 배포되면 그때 날아간다</text>
+  </g>
+  <path d="M114,172 L114,250 L260,250" stroke="currentColor" stroke-width="1.2" fill="none" marker-end="url(#arr)" opacity=".6"/>
+  <text x="122" y="206" font-size="11" fill="currentColor" opacity=".7" font-family="sans-serif">같은 지문이면</text>
+  <text x="122" y="222" font-size="11" fill="currentColor" opacity=".7" font-family="sans-serif">탐색 없이</text>
+  <path d="M704,250 L849,250 L849,174" stroke="#d97706" stroke-width="1.2" fill="none" marker-end="url(#arrA)" opacity=".8"/>
+  <text x="712" y="242" font-size="11" fill="#d97706" font-family="sans-serif">캐시된 답을 바로 게시</text>
+</svg>
