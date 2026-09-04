@@ -1,0 +1,74 @@
+<svg viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="게이트웨이 로그를 한 묶음으로 조회하면 사망 직후 503 홍수가 상한을 채워 범인 요청이 탈락하지만, 성격이 다른 세 묶음으로 나눠 조회하면 각 묶음이 자기 상한을 가져 범인 요청이 항상 포함된다">
+  <defs>
+    <marker id="sb-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+    <marker id="sb-arrA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#d97706"/>
+    </marker>
+  </defs>
+
+  <!-- 왼쪽: 전 -->
+  <text x="16" y="28" font-size="13" font-weight="600" fill="currentColor" font-family="sans-serif">전 — 한 묶음으로 조회했어요</text>
+
+  <g fill="none" stroke="currentColor" stroke-width="1.4">
+    <rect x="16" y="48" width="404" height="94" rx="8"/>
+  </g>
+  <g fill="currentColor" font-family="sans-serif">
+    <text x="218" y="74" font-size="13" font-weight="600" text-anchor="middle">게이트웨이 로그 한 묶음</text>
+    <text x="218" y="98" font-size="11" opacity=".7" text-anchor="middle">처리 중 사망한 요청 · 사망 후 5xx 응답 · 평소 요청이</text>
+    <text x="218" y="116" font-size="11" opacity=".7" text-anchor="middle">한 쿼리 안에 섞여 있어요</text>
+  </g>
+
+  <g stroke="currentColor" stroke-width="1.4" fill="none" marker-end="url(#sb-arr)">
+    <path d="M 218 142 L 218 194"/>
+  </g>
+  <text x="226" y="174" font-size="11" fill="currentColor" opacity=".7" font-family="sans-serif">최신순 상한을 걸어 자름</text>
+
+  <g fill="none" stroke="currentColor" stroke-width="1.4" opacity=".8">
+    <rect x="16" y="198" width="404" height="110" rx="8"/>
+  </g>
+  <g fill="currentColor" font-family="sans-serif">
+    <text x="218" y="224" font-size="13" font-weight="600" text-anchor="middle">상한을 503 수백 줄이 다 차지해요</text>
+    <text x="218" y="248" font-size="11" opacity=".7" text-anchor="middle">사망 직후 쏟아진 503이 최신이라 앞자리를 가져가요</text>
+    <text x="218" y="272" font-size="11" opacity=".7" text-anchor="middle">범인 요청은 한 줄도 전달되지 않아요</text>
+    <text x="218" y="292" font-size="11" opacity=".55" text-anchor="middle">LLM은 결과만 보고 "요청 로그 없음"으로 읽어요</text>
+  </g>
+
+  <!-- 구분선 -->
+  <line x1="440" y1="20" x2="440" y2="360" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4" opacity=".35"/>
+
+  <!-- 오른쪽: 후 -->
+  <text x="460" y="28" font-size="13" font-weight="600" fill="#d97706" font-family="sans-serif">후 — 성격이 다른 셋을 따로 조회해요</text>
+
+  <g fill="none" stroke="currentColor" stroke-width="1.4">
+    <rect x="460" y="48" width="424" height="42" rx="6"/>
+    <rect x="460" y="98" width="424" height="42" rx="6"/>
+    <rect x="460" y="148" width="424" height="42" rx="6"/>
+  </g>
+  <g fill="currentColor" font-family="sans-serif">
+    <text x="476" y="74" font-size="13" font-weight="600">처리 중 사망한 요청</text>
+    <text x="868" y="74" font-size="11" opacity=".7" text-anchor="end">"upstream prematurely closed"</text>
+    <text x="476" y="124" font-size="13" font-weight="600">사망 후 5xx 응답</text>
+    <text x="868" y="124" font-size="11" opacity=".7" text-anchor="end">503 홍수는 여기에 갇혀요</text>
+    <text x="476" y="174" font-size="13" font-weight="600">나머지 액세스 로그</text>
+    <text x="868" y="174" font-size="11" opacity=".7" text-anchor="end">전후 문맥용</text>
+  </g>
+
+  <g stroke="#d97706" stroke-width="1.8" fill="none" marker-end="url(#sb-arrA)">
+    <path d="M 672 190 L 672 240"/>
+  </g>
+  <text x="680" y="220" font-size="11" fill="currentColor" opacity=".7" font-family="sans-serif">묶음마다 자기 상한</text>
+
+  <g fill="none" stroke="#d97706" stroke-width="1.8">
+    <rect x="460" y="244" width="424" height="88" rx="8"/>
+  </g>
+  <g font-family="sans-serif">
+    <text x="672" y="270" font-size="13" font-weight="600" text-anchor="middle" fill="#d97706">범인 요청이 항상 포함돼요</text>
+    <text x="672" y="294" font-size="11" opacity=".7" text-anchor="middle" fill="currentColor">한 묶음이 시끄러워도 다른 묶음을 밀어내지 못해요</text>
+    <text x="672" y="314" font-size="11" opacity=".7" text-anchor="middle" fill="currentColor">리플레이에서 0건이던 범인 요청이 상위로 올라왔어요</text>
+  </g>
+
+  <text x="450" y="376" font-size="11" fill="currentColor" opacity=".55" font-family="sans-serif" text-anchor="middle">신호 추출이 잘못 자르면 LLM은 조용히 틀린 답을 내요</text>
+</svg>

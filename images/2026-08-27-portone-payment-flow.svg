@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" role="img" aria-label="결제는 브라우저가 결제창을 띄우는 경로, 서버가 결제 단건을 조회해 금액을 대조하는 경로, PortOne이 브라우저와 무관하게 서버로 보내는 웹훅 경로 세 갈래로 이뤄진다" style="max-width:100%;height:auto">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="currentColor"/>
+    </marker>
+    <marker id="ar-o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#e8590c"/>
+    </marker>
+  </defs>
+
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="20" y="16" width="140" height="40" rx="6" class="box-browser"/>
+    <rect x="230" y="16" width="140" height="40" rx="6" class="box-server"/>
+    <rect x="440" y="16" width="140" height="40" rx="6" class="box-portone"/>
+    <rect x="630" y="16" width="110" height="40" rx="6" class="box-pg"/>
+  </g>
+
+  <g font-size="13" font-weight="600" text-anchor="middle" fill="currentColor">
+    <text x="90" y="41">브라우저</text>
+    <text x="300" y="41">내 서버</text>
+    <text x="510" y="41">PortOne</text>
+    <text x="685" y="41">PG사</text>
+  </g>
+
+  <g stroke="currentColor" stroke-width="1" opacity=".25" stroke-dasharray="3 4">
+    <path d="M90,62 L90,410"/>
+    <path d="M300,62 L300,410"/>
+    <path d="M510,62 L510,410"/>
+    <path d="M685,62 L685,410"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="1.5" fill="none">
+    <path d="M90,100 L294,100" class="flow1" marker-end="url(#ar)"/>
+    <path d="M300,136 L96,136" class="flow2" marker-end="url(#ar)"/>
+    <path d="M90,172 L504,172" class="flow3" marker-end="url(#ar)"/>
+    <path d="M510,208 L679,208" class="flow4" marker-end="url(#ar)"/>
+    <path d="M510,244 L96,244" class="flow5" marker-end="url(#ar)"/>
+    <path d="M90,280 L294,280" class="flow6" marker-end="url(#ar)"/>
+    <path d="M300,316 L504,316" class="flow7" marker-end="url(#ar)"/>
+    <path d="M510,348 L306,348" class="flow8" marker-end="url(#ar)"/>
+  </g>
+  <g stroke="#e8590c" stroke-width="1.5" fill="none">
+    <path d="M510,400 L306,400" class="flow9" marker-end="url(#ar-o)"/>
+  </g>
+
+  <g font-size="11" text-anchor="middle" fill="currentColor">
+    <text x="195" y="92">① 주문 생성 요청</text>
+    <text x="195" y="128">② 주문번호와 확정 금액</text>
+    <text x="200" y="164">③ 결제창 요청</text>
+    <text x="597" y="200">④ 카드 승인</text>
+    <text x="200" y="236">⑤ 콜백 또는 리다이렉트</text>
+    <text x="195" y="272">⑥ 결제번호 전달</text>
+    <text x="405" y="308" font-weight="600">⑦ 결제 단건 조회</text>
+    <text x="405" y="340" font-weight="600">⑧ PortOne이 아는 실제 금액</text>
+  </g>
+  <text x="405" y="368" font-size="11" text-anchor="middle" fill="currentColor" font-weight="600">금액 대조</text>
+  <text x="405" y="392" font-size="11" text-anchor="middle" fill="#e8590c" font-weight="600">⑨ 웹훅 · 브라우저와 무관하게</text>
+
+  <text x="380" y="430" font-size="11" text-anchor="middle" fill="currentColor" opacity=".7">③의 금액은 브라우저가 보낸 값이라, ⑦⑧로 서버가 다시 물어봐요</text>
+</svg>

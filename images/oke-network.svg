@@ -37,9 +37,8 @@
   <rect x="334" y="196" width="130" height="52" class="box"/>
   <text x="399" y="218" text-anchor="middle" class="plain">pod</text>
   <text x="399" y="236" text-anchor="middle" class="sub">노드당 31개</text>
-  <text x="502" y="206" class="hot-txt">같은 IP 풀을 나눠 씀</text>
-  <text x="502" y="224" class="sub">쓸 수 있는 251개가</text>
-  <text x="502" y="240" class="sub">pod 상한을 정해요</text>
+  <text x="502" y="206" class="hot-txt">노드와 pod이 나눠 씀</text>
+  <text x="502" y="226" class="sub">쓸 수 있는 IP는 251개</text>
 
   <rect x="520" y="52" width="150" height="56" class="box"/>
   <text x="595" y="76" text-anchor="middle" class="name">api</text>

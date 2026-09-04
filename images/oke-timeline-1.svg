@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300" role="img" aria-label="EKS에서 OKE로 1편 타임라인: 4월 21일 ATS 설계 시작, 4월 27일 기존 테넌시 확장으로 방향 전환, 5월 4일 설계 확정, 5월 6~8일 dev 부트스트랩 자동화와 Keycloak 26 구축, 5월 13일 OKE 3단 업그레이드, 6월 19일 dev cron 컷오버, 6월 23일 ephemeral-storage 사태로 boot volume 100GB 상향">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300" role="img" aria-label="EKS에서 OKE로 1편 타임라인: 4월 21일 채용 시스템 설계 시작, 4월 27일 기존 테넌시 확장으로 방향 전환, 5월 4일 설계 확정, 5월 6~8일 dev 부트스트랩 자동화와 Keycloak 26 구축, 5월 13일 OKE 3단 업그레이드, 6월 19일 dev 배치 스케줄 컷오버, 6월 23일 ephemeral-storage 사태로 boot volume 100GB 상향">
   <style>
     text { font-family: system-ui, -apple-system, sans-serif; fill: currentColor; }
     .date { font-size: 13px; font-weight: 600; }
@@ -12,7 +12,7 @@
 
   <circle cx="96" cy="30" r="4" class="dot"/>
   <text x="86" y="27" text-anchor="end" class="date">4월 21일</text>
-  <text x="112" y="34" class="desc">ATS 설계 — 기존 서비스 이전은 별도 과제</text>
+  <text x="112" y="34" class="desc">채용 시스템 설계 — 기존 서비스 이전은 별도 과제</text>
 
   <circle cx="96" cy="72" r="4" class="dot-hl"/>
   <text x="86" y="69" text-anchor="end" class="date">4월 27일</text>
@@ -32,7 +32,7 @@
 
   <circle cx="96" cy="240" r="4" class="dot-hl"/>
   <text x="86" y="237" text-anchor="end" class="date">6월 19일</text>
-  <text x="112" y="244" class="desc">dev cron 컷오버 — 기준 환경 전환</text>
+  <text x="112" y="244" class="desc">dev 배치 스케줄 컷오버 — 기준 환경 전환</text>
 
   <circle cx="96" cy="276" r="4" class="dot"/>
   <text x="86" y="273" text-anchor="end" class="date">6월 23일</text>

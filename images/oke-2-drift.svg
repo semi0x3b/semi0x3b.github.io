@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" role="img" aria-label="terraform plan은 코드와 변수 파일과 실제 리소스를 함께 읽는데, 저장소 밖에 있던 변수 파일 탓에 운영 클러스터 교체와 인증 설정 삭제가 예고됐다">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: currentColor; }
+    .name { font-size: 13px; font-weight: 600; }
+    .sub { font-size: 11px; opacity: .7; }
+    .edge-lbl { font-size: 11px; opacity: .7; }
+    .box { fill: none; stroke: currentColor; stroke-width: 1.5; rx: 6; opacity: .55; }
+    .box-base { fill: none; stroke: #43809c; stroke-width: 2; rx: 6; }
+    .box-hot { fill: none; stroke: #e8590c; stroke-width: 2; rx: 6; }
+    .flow { stroke: currentColor; stroke-width: 1.5; fill: none; opacity: .6; }
+  </style>
+  <defs>
+    <marker id="d-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <rect x="40" y="56" width="156" height="48" class="box"/>
+  <text x="118" y="85" text-anchor="middle" class="name">Terraform 코드</text>
+
+  <rect x="40" y="136" width="156" height="58" class="box-hot"/>
+  <text x="118" y="162" text-anchor="middle" class="name">변수 파일</text>
+  <text x="118" y="180" text-anchor="middle" class="sub">저장소 밖에 있던 값</text>
+
+  <rect x="40" y="222" width="156" height="48" class="box"/>
+  <text x="118" y="251" text-anchor="middle" class="name">실제 prod 리소스</text>
+
+  <rect x="290" y="132" width="140" height="64" class="box-base"/>
+  <text x="360" y="169" text-anchor="middle" class="name">terraform plan</text>
+
+  <rect x="496" y="64" width="200" height="58" class="box-hot"/>
+  <text x="596" y="90" text-anchor="middle" class="name">클러스터 교체 예고</text>
+  <text x="596" y="108" text-anchor="middle" class="sub">compartment는 못 바꿔요</text>
+
+  <rect x="496" y="196" width="200" height="58" class="box-hot"/>
+  <text x="596" y="222" text-anchor="middle" class="name">인증 설정 삭제 예고</text>
+  <text x="596" y="240" text-anchor="middle" class="sub">realm·client가 전부 대상</text>
+
+  <path d="M196,80 L244,80 L244,152 L288,152" class="flow" marker-end="url(#d-ah)"/>
+  <text x="200" y="74" class="edge-lbl">정의를 읽어요</text>
+
+  <path d="M196,165 L288,165" class="flow" marker-end="url(#d-ah)"/>
+  <text x="200" y="158" class="edge-lbl">값을 채워요</text>
+
+  <path d="M196,246 L244,246 L244,180 L288,180" class="flow" marker-end="url(#d-ah)"/>
+  <text x="200" y="266" class="edge-lbl">현재 상태를 읽어요</text>
+
+  <path d="M430,152 L462,152 L462,93 L494,93" class="flow" marker-end="url(#d-ah)"/>
+  <text x="492" y="88" text-anchor="end" class="edge-lbl">값이 어긋나서</text>
+
+  <path d="M430,176 L462,176 L462,225 L494,225" class="flow" marker-end="url(#d-ah)"/>
+  <text x="492" y="248" text-anchor="end" class="edge-lbl">파일이 없어서</text>
+</svg>

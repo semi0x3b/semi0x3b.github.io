@@ -1,0 +1,81 @@
+<svg viewBox="0 0 900 380" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="환각 차단 네 겹 중 입력 격리·인용 규율·고정 구조는 모델 안팎의 규율이고, 마지막 인용 기계 검증만 코드가 대조해 통과분만 슬랙에 남긴다">
+  <defs>
+    <marker id="hg-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+    <marker id="hg-arrA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#d97706"/>
+    </marker>
+  </defs>
+
+  <!-- 1겹: 입력 격리 -->
+  <g fill="none" stroke="currentColor" stroke-width="1.4">
+    <rect x="16" y="56" width="210" height="124" rx="8"/>
+  </g>
+  <g fill="currentColor" font-family="sans-serif">
+    <text x="121" y="82" font-size="13" font-weight="600" text-anchor="middle">입력 격리</text>
+    <text x="121" y="106" font-size="11" opacity=".7" text-anchor="middle">로그 속 지시문은 데이터로만</text>
+    <text x="121" y="126" font-size="11" opacity=".7" text-anchor="middle">취급하라고 못 박아요</text>
+    <text x="121" y="150" font-size="11" opacity=".7" text-anchor="middle">이메일·토큰·주민번호는</text>
+    <text x="121" y="166" font-size="11" opacity=".7" text-anchor="middle">가리고 내보내요</text>
+  </g>
+
+  <!-- 2·3겹: LLM 안의 규율 -->
+  <rect x="272" y="32" width="300" height="200" rx="10" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 3" opacity=".5"/>
+  <text x="282" y="24" font-size="11" fill="currentColor" opacity=".6" font-family="sans-serif">LLM 한 단계 — 자유 서술은 여기 안에서만</text>
+  <g fill="none" stroke="currentColor" stroke-width="1.4">
+    <rect x="288" y="52" width="268" height="76" rx="8"/>
+    <rect x="288" y="144" width="268" height="76" rx="8"/>
+  </g>
+  <g fill="currentColor" font-family="sans-serif">
+    <text x="422" y="76" font-size="13" font-weight="600" text-anchor="middle">인용 규율</text>
+    <text x="422" y="98" font-size="11" opacity=".7" text-anchor="middle">출처 태그를 그대로 인용하고</text>
+    <text x="422" y="116" font-size="11" opacity=".7" text-anchor="middle">모르면 모른다고 적게 해요</text>
+
+    <text x="422" y="168" font-size="13" font-weight="600" text-anchor="middle">고정 구조</text>
+    <text x="422" y="190" font-size="11" opacity=".7" text-anchor="middle">자유 서술 대신 여섯 칸 JSON</text>
+    <text x="422" y="208" font-size="11" opacity=".7" text-anchor="middle">빈 칸은 "(not found in the log)"</text>
+  </g>
+
+  <!-- 4겹: 인용 기계 검증 -->
+  <g fill="none" stroke="#d97706" stroke-width="1.8">
+    <rect x="618" y="52" width="266" height="152" rx="8"/>
+  </g>
+  <g font-family="sans-serif">
+    <text x="751" y="78" font-size="13" font-weight="600" text-anchor="middle" fill="#d97706">인용 기계 검증</text>
+    <text x="751" y="102" font-size="11" opacity=".7" text-anchor="middle" fill="currentColor">인용한 라인이 입력 원문에</text>
+    <text x="751" y="118" font-size="11" opacity=".7" text-anchor="middle" fill="currentColor">실제로 있는지 대조해요</text>
+    <text x="751" y="142" font-size="11" opacity=".7" text-anchor="middle" fill="currentColor">최소 15자 — 짧은 인용의</text>
+    <text x="751" y="158" font-size="11" opacity=".7" text-anchor="middle" fill="currentColor">우연 일치를 막아요</text>
+    <text x="751" y="182" font-size="11" opacity=".7" text-anchor="middle" fill="currentColor">없으면 폐기하고 폐기를 적어요</text>
+  </g>
+
+  <!-- 흐름 -->
+  <g stroke="currentColor" stroke-width="1.4" marker-end="url(#hg-arr)">
+    <line x1="226" y1="132" x2="268" y2="132"/>
+  </g>
+  <text x="234" y="122" font-size="11" fill="currentColor" opacity=".7" font-family="sans-serif">마스킹한 신호만</text>
+
+  <g stroke="#d97706" stroke-width="1.8" marker-end="url(#hg-arrA)">
+    <line x1="572" y1="132" x2="614" y2="132"/>
+  </g>
+  <text x="578" y="122" font-size="11" fill="currentColor" opacity=".7" font-family="sans-serif">JSON 리포트</text>
+
+  <g stroke="#d97706" stroke-width="1.8" fill="none" marker-end="url(#hg-arrA)">
+    <path d="M 751 204 L 751 254"/>
+  </g>
+  <text x="759" y="234" font-size="11" fill="currentColor" opacity=".7" font-family="sans-serif">통과분만</text>
+
+  <g fill="none" stroke="currentColor" stroke-width="1.4">
+    <rect x="560" y="258" width="324" height="82" rx="8"/>
+  </g>
+  <g fill="currentColor" font-family="sans-serif">
+    <text x="722" y="284" font-size="13" font-weight="600" text-anchor="middle">슬랙 스레드</text>
+    <text x="722" y="306" font-size="11" opacity=".7" text-anchor="middle">화면에 뜨는 인용문은 모델이 쓴 문장이 아니라</text>
+    <text x="722" y="324" font-size="11" opacity=".7" text-anchor="middle">대조에 성공한 입력 원문이에요</text>
+  </g>
+
+  <text x="270" y="290" font-size="11" fill="currentColor" opacity=".55" font-family="sans-serif" text-anchor="middle">앞의 세 겹은 모델에게 부탁하는 규율이고,</text>
+  <text x="270" y="308" font-size="11" fill="currentColor" opacity=".55" font-family="sans-serif" text-anchor="middle">마지막 한 겹만 코드가 직접 확인해요</text>
+</svg>

@@ -45,9 +45,9 @@
 
   <rect x="470" y="70" width="212" height="120" class="box"/>
   <text x="576" y="96" text-anchor="middle" class="name">네임스페이스별 워크로드</text>
-  <text x="576" y="122" text-anchor="middle" class="plain">likelion 31종</text>
-  <text x="576" y="144" text-anchor="middle" class="plain">ats · lionhub 각 7종</text>
-  <text x="576" y="166" text-anchor="middle" class="plain">saas · campfire 각 8종</text>
+  <text x="576" y="122" text-anchor="middle" class="plain">서비스 31종</text>
+  <text x="576" y="144" text-anchor="middle" class="plain">채용 · 커뮤니티 각 7종</text>
+  <text x="576" y="166" text-anchor="middle" class="plain">SaaS · 부트캠프 각 8종</text>
 
   <path d="M166,57 L240,57" class="flow" marker-end="url(#g-ah)"/>
   <path d="M396,66 L436,66 L436,104 L464,104" class="flow" marker-end="url(#g-ah)"/>

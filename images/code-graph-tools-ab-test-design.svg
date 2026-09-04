@@ -1,0 +1,57 @@
+<svg viewBox="0 0 960 440" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="graphify와 Serena는 기준 질문 네 개를 켬과 끔으로 짝지어 돌렸고, CodeGraph는 질문 하나로 힌트 있음과 없음을 비교했다. 앞의 둘은 MCP 도구 목록에 올려 부를지 말지를 에이전트가 정하게 했고, CodeGraph는 질문에서 뽑은 식별자로 조회한 심볼 위치를 프롬프트 고정 자리에 넣었다. 탐색 에이전트의 원래 도구는 파일 읽기, 문자열 검색, 파일 찾기 셋이고 프롬프트와 모델과 레포 상태는 양쪽을 같게 뒀다. 측정한 것은 핵심 근거 파일 인용과 소요 시간과 그래프 도구 호출 수 셋이다">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+    <marker id="arrA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#d97706"/>
+    </marker>
+  </defs>
+
+  <rect x="8" y="124" width="176" height="128" rx="8" class="box-q" fill="none" stroke="currentColor" stroke-width="1.4"/>
+  <rect x="300" y="20" width="222" height="132" rx="8" class="box-mcp" fill="none" stroke="currentColor" stroke-width="1.4"/>
+  <rect x="300" y="228" width="222" height="132" rx="8" class="box-hint" fill="none" stroke="currentColor" stroke-width="1.4"/>
+  <rect x="636" y="124" width="180" height="128" rx="8" class="box-agent" fill="none" stroke="currentColor" stroke-width="1.4"/>
+  <rect x="300" y="384" width="516" height="48" rx="8" class="box-metric" fill="none" stroke="#d97706" stroke-width="1.6"/>
+
+  <g fill="currentColor" font-family="sans-serif" text-anchor="middle">
+    <text x="96" y="160" font-size="13" font-weight="600">기준 질문 네 개</text>
+    <text x="96" y="188" font-size="11" opacity=".7">실제로 들어왔던 질문 넷</text>
+    <text x="96" y="206" font-size="11" opacity=".7">프론트·백엔드·기획 문서</text>
+    <text x="96" y="224" font-size="11" opacity=".7">세 층에 흩어진 근거</text>
+
+    <text x="411" y="52" font-size="13" font-weight="600">MCP 도구로 붙이기</text>
+    <text x="411" y="80" font-size="11" opacity=".7">graphify · 구문 파서 그래프</text>
+    <text x="411" y="98" font-size="11" opacity=".7">Serena · 언어 서버 정의·참조</text>
+    <text x="411" y="124" font-size="11" opacity=".7">호출 여부는 에이전트 재량</text>
+
+    <text x="411" y="260" font-size="13" font-weight="600">결정적 힌트 주입</text>
+    <text x="411" y="288" font-size="11" opacity=".7">CodeGraph · 심볼 위치 인덱스</text>
+    <text x="411" y="306" font-size="11" opacity=".7">질문에서 뽑은 식별자로 조회</text>
+    <text x="411" y="332" font-size="11" opacity=".7">프롬프트 고정 자리, 재량 없음</text>
+
+    <text x="726" y="160" font-size="13" font-weight="600">탐색 에이전트</text>
+    <text x="726" y="188" font-size="11" opacity=".7">원래 도구 셋</text>
+    <text x="726" y="206" font-size="11" opacity=".7">파일 읽기 · 문자열 검색</text>
+    <text x="726" y="222" font-size="11" opacity=".7">파일 찾기</text>
+    <text x="726" y="240" font-size="11" opacity=".7">프롬프트·모델·레포 동일</text>
+
+    <text x="558" y="406" font-size="13" font-weight="600" fill="#d97706">측정 세 축</text>
+    <text x="558" y="424" font-size="11" opacity=".7">핵심 근거 파일 인용 · 소요 시간 · 그래프 도구 호출 수</text>
+  </g>
+
+  <path d="M184,178 L212,178 L212,86 L298,86" class="flow-q-mcp" fill="none" stroke="currentColor" stroke-width="1.4" marker-end="url(#arr)"/>
+  <path d="M184,206 L212,206 L212,294 L298,294" class="flow-q-hint" fill="none" stroke="currentColor" stroke-width="1.4" marker-end="url(#arr)"/>
+  <path d="M522,86 L578,86 L578,170 L634,170" class="flow-mcp-agent" fill="none" stroke="currentColor" stroke-width="1.4" marker-end="url(#arr)"/>
+  <path d="M522,294 L578,294 L578,206 L634,206" class="flow-hint-agent" fill="none" stroke="currentColor" stroke-width="1.4" marker-end="url(#arr)"/>
+  <path d="M726,252 L726,384" class="flow-agent-metric" fill="none" stroke="#d97706" stroke-width="1.4" marker-end="url(#arrA)"/>
+
+  <g fill="currentColor" font-family="sans-serif" font-size="11" opacity=".7">
+    <text x="255" y="78" text-anchor="middle">같은 질문 4개</text>
+    <text x="255" y="286" text-anchor="middle">질문 하나</text>
+    <text x="582" y="112">켬/끔 짝</text>
+    <text x="582" y="272">힌트 있음/없음</text>
+    <text x="734" y="320" fill="#d97706" opacity="1">실행마다 기록</text>
+  </g>
+</svg>

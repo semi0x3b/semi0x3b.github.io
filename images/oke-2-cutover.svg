@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 290" role="img" aria-label="DNS 컷오버 세 단계: 라우팅만 먼저 등록하고, DNS를 EKS 로드밸런서에서 OKE로 넘긴 뒤, 인증서 자동 발급이 가능해진 도메인부터 인증서를 붙인다">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: currentColor; }
+    .name { font-size: 13px; font-weight: 600; }
+    .sub { font-size: 11px; opacity: .7; }
+    .edge-lbl { font-size: 11px; opacity: .7; }
+    .box { fill: none; stroke: currentColor; stroke-width: 1.5; rx: 6; opacity: .55; }
+    .box-base { fill: none; stroke: #43809c; stroke-width: 2; rx: 6; }
+    .flow { stroke: currentColor; stroke-width: 1.5; fill: none; opacity: .6; }
+  </style>
+  <defs>
+    <marker id="c-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <rect x="40" y="60" width="160" height="64" class="box"/>
+  <text x="120" y="87" text-anchor="middle" class="name">① 라우팅만 등록</text>
+  <text x="120" y="105" text-anchor="middle" class="sub">도메인별 host만</text>
+
+  <rect x="280" y="60" width="160" height="64" class="box"/>
+  <text x="360" y="87" text-anchor="middle" class="name">② DNS를 넘겨요</text>
+  <text x="360" y="105" text-anchor="middle" class="sub">EKS 로드밸런서 → OKE</text>
+
+  <rect x="520" y="60" width="160" height="64" class="box"/>
+  <text x="600" y="87" text-anchor="middle" class="name">③ 인증서를 붙여요</text>
+  <text x="600" y="105" text-anchor="middle" class="sub">host 등록에 tls 추가</text>
+
+  <rect x="250" y="200" width="230" height="60" class="box-base"/>
+  <text x="365" y="226" text-anchor="middle" class="name">인증서 자동 발급</text>
+  <text x="365" y="244" text-anchor="middle" class="sub">DNS가 새 클러스터를 가리켜야 성공</text>
+
+  <path d="M200,92 L278,92" class="flow" marker-end="url(#c-ah)"/>
+  <text x="239" y="84" text-anchor="middle" class="edge-lbl">아직 못 붙여요</text>
+
+  <path d="M440,92 L518,92" class="flow" marker-end="url(#c-ah)"/>
+  <text x="479" y="84" text-anchor="middle" class="edge-lbl">발급이 열려요</text>
+
+  <path d="M360,124 L360,198" class="flow" marker-end="url(#c-ah)"/>
+  <text x="368" y="166" class="edge-lbl">선행 조건을 채워요</text>
+
+  <path d="M480,230 L600,230 L600,126" class="flow" marker-end="url(#c-ah)"/>
+  <text x="490" y="222" class="edge-lbl">도달한 도메인부터</text>
+</svg>

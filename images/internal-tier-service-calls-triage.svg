@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" role="img" aria-label="거절된 서버간 호출을 두 갈래로 나눈다. 신원이 있을 수 없는 경로는 예외 목록에 사유를 적고, 잘못된 문으로 들어온 호출은 내부용 경로를 새로 내고 호출처를 옮긴다" style="max-width:100%;height:auto">
+  <defs>
+    <marker id="tri-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="270" y="20" width="160" height="48" rx="6" class="box-start"/>
+    <rect x="250" y="110" width="200" height="60" rx="6" class="box-question"/>
+    <rect x="40" y="246" width="250" height="70" rx="6" class="box-exempt"/>
+    <rect x="410" y="246" width="250" height="70" rx="6" class="box-newroute"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="1.5" fill="none">
+    <path d="M350,68 L350,106" class="flow-stem" marker-end="url(#tri-ar)"/>
+    <path d="M350,170 L350,200" class="flow-split"/>
+    <path d="M350,200 L165,200 L165,242" class="flow-left" marker-end="url(#tri-ar)"/>
+    <path d="M350,200 L535,200 L535,242" class="flow-right" marker-end="url(#tri-ar)"/>
+  </g>
+
+  <g font-size="13" text-anchor="middle" fill="currentColor">
+    <text x="350" y="49" font-weight="600">거절된 서버간 호출</text>
+    <text x="350" y="137">신원이 애초에</text>
+    <text x="350" y="157">있을 수 없는 경로인가요</text>
+    <text x="165" y="278">예외 목록에</text>
+    <text x="165" y="300">사유를 적어요</text>
+    <text x="535" y="278">내부용 경로를 내고</text>
+    <text x="535" y="300">호출처를 옮겨요</text>
+  </g>
+
+  <g font-size="11" text-anchor="middle" fill="currentColor" opacity=".7">
+    <text x="250" y="192">인증 이전 단계라 있을 수가 없어요</text>
+    <text x="443" y="192">부르는 쪽이 문을 잘못 골랐어요</text>
+    <text x="165" y="336">로그인이 여기였어요</text>
+    <text x="535" y="336">수강권한 부여가 여기였어요</text>
+  </g>
+</svg>

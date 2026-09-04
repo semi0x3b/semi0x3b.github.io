@@ -81,7 +81,7 @@
     <rect x="380" y="200" width="560" height="64" rx="8"/>
   </g>
   <g fill="currentColor" font-family="sans-serif">
-    <text x="660" y="224" font-size="13" font-weight="600" text-anchor="middle">발송 분기 — 이 지문을 전에 봤는가, 사람이 어떤 상태로 뒀는가</text>
+    <text x="660" y="224" font-size="13" font-weight="600" text-anchor="middle">장부 스위치 — 이 지문을 전에 봤는가, 사람이 어떤 상태로 뒀는가</text>
     <text x="660" y="246" font-size="11" opacity=".7" text-anchor="middle">노션 장부에서 지문 조회 (누적 횟수 · 스레드 위치 · 상태 칼럼)</text>
   </g>
 
@@ -124,5 +124,5 @@
     <text x="212" y="400">알림을 계속 받을지는 사람이 정한다</text>
   </g>
 
-  <text x="480" y="456" font-size="11" fill="currentColor" opacity=".55" font-family="sans-serif" text-anchor="middle">봇에는 운영 환경을 바꿀 권한이 없다 — 재시작·복구는 쿠버네티스(probe) 소관으로 분리</text>
+  <text x="480" y="456" font-size="11" fill="currentColor" opacity=".55" font-family="sans-serif" text-anchor="middle">권한의 부재 — 봇에는 운영 환경을 바꿀 권한이 없다</text>
 </svg>

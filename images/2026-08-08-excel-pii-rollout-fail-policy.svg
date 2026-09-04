@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" role="img" aria-label="기록이 실패했을 때 두 종류의 기록이 서로 다르게 행동한다. 개인정보 반출 기록은 실패하면 다운로드를 거절해 파일을 내보내지 않고, 관리자 행위 감사 로그는 실패해도 요청을 그대로 진행시켜 관리자 화면을 세우지 않는다">
+  <style>
+    text { font-family: system-ui, -apple-system, sans-serif; fill: currentColor; }
+    .name { font-size: 13px; font-weight: 600; }
+    .plain { font-size: 13px; }
+    .sub { font-size: 11px; opacity: .7; }
+    .edge-lbl { font-size: 11px; opacity: .7; }
+    .box { fill: none; stroke: currentColor; stroke-width: 1.5; rx: 6; opacity: .55; }
+    .box-stop { fill: none; stroke: #c24634; stroke-width: 1.8; rx: 6; }
+    .flow { stroke: currentColor; stroke-width: 1.6; fill: none; opacity: .6; }
+    .flow-stop { stroke: #c24634; stroke-width: 1.6; fill: none; }
+    .stop-lbl { font-size: 11px; fill: #c24634; }
+  </style>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker>
+    <marker id="ah-stop" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c24634"/></marker>
+  </defs>
+
+  <rect x="270" y="20" width="220" height="44" class="box"/>
+  <text x="380" y="47" text-anchor="middle" class="name">기록을 남기지 못했어요</text>
+
+  <rect x="40" y="130" width="300" height="56" class="box-stop"/>
+  <text x="190" y="152" text-anchor="middle" class="name">개인정보 반출 기록</text>
+  <text x="190" y="170" text-anchor="middle" class="sub">누가 · 왜 · 어떤 항목을 받았나</text>
+
+  <rect x="420" y="130" width="300" height="56" class="box"/>
+  <text x="570" y="152" text-anchor="middle" class="name">관리자 행위 감사 로그</text>
+  <text x="570" y="170" text-anchor="middle" class="sub">관리자 화면의 요청 전반</text>
+
+  <rect x="40" y="250" width="300" height="44" class="box-stop"/>
+  <text x="190" y="277" text-anchor="middle" class="plain">다운로드를 거절해요</text>
+
+  <rect x="420" y="250" width="300" height="44" class="box"/>
+  <text x="570" y="277" text-anchor="middle" class="plain">요청은 그대로 진행해요</text>
+
+  <rect x="40" y="352" width="300" height="44" class="box-stop"/>
+  <text x="190" y="379" text-anchor="middle" class="sub">기록 없는 반출이 생기면 안 되니까요</text>
+
+  <rect x="420" y="352" width="300" height="44" class="box"/>
+  <text x="570" y="379" text-anchor="middle" class="sub">로그 때문에 업무가 멈추면 안 되니까요</text>
+
+  <path d="M300,64 L190,64 L190,124" class="flow-stop" marker-end="url(#ah-stop)"/>
+  <path d="M460,64 L570,64 L570,124" class="flow" marker-end="url(#ah)"/>
+  <path d="M190,186 L190,244" class="flow-stop" marker-end="url(#ah-stop)"/>
+  <path d="M570,186 L570,244" class="flow" marker-end="url(#ah)"/>
+  <path d="M190,294 L190,346" class="flow-stop" marker-end="url(#ah-stop)"/>
+  <path d="M570,294 L570,346" class="flow" marker-end="url(#ah)"/>
+
+  <text x="200" y="98" class="stop-lbl">반출을 지키는 기록이면</text>
+  <text x="580" y="98" class="edge-lbl">업무를 보는 기록이면</text>
+  <text x="200" y="222" class="stop-lbl">파일을 내보내지 않아요</text>
+  <text x="580" y="222" class="edge-lbl">화면을 세우지 않아요</text>
+  <text x="200" y="330" class="stop-lbl">고른 이유</text>
+  <text x="580" y="330" class="edge-lbl">고른 이유</text>
+</svg>
