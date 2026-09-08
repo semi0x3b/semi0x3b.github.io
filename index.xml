@@ -6,65 +6,65 @@
       <description>Last 10 notes on semicolon;</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>posts</title>
-    <link>https://semi0x3b.github.io/tags/posts</link>
-    <guid>https://semi0x3b.github.io/tags/posts</guid>
+    <title>concurrency</title>
+    <link>https://semi0x3b.github.io/tags/concurrency</link>
+    <guid>https://semi0x3b.github.io/tags/concurrency</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 08 Sep 2026 14:26:24 GMT</pubDate>
+    <pubDate>Tue, 08 Sep 2026 14:27:32 GMT</pubDate>
   </item><item>
-    <title>kubernetes</title>
-    <link>https://semi0x3b.github.io/tags/kubernetes</link>
-    <guid>https://semi0x3b.github.io/tags/kubernetes</guid>
+    <title>debugging</title>
+    <link>https://semi0x3b.github.io/tags/debugging</link>
+    <guid>https://semi0x3b.github.io/tags/debugging</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 08 Sep 2026 14:26:24 GMT</pubDate>
+    <pubDate>Tue, 08 Sep 2026 14:27:32 GMT</pubDate>
   </item><item>
-    <title>oke</title>
-    <link>https://semi0x3b.github.io/tags/oke</link>
-    <guid>https://semi0x3b.github.io/tags/oke</guid>
+    <title>api-gateway</title>
+    <link>https://semi0x3b.github.io/tags/api-gateway</link>
+    <guid>https://semi0x3b.github.io/tags/api-gateway</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 08 Sep 2026 14:26:24 GMT</pubDate>
+    <pubDate>Tue, 08 Sep 2026 14:27:32 GMT</pubDate>
   </item><item>
-    <title>oci</title>
-    <link>https://semi0x3b.github.io/tags/oci</link>
-    <guid>https://semi0x3b.github.io/tags/oci</guid>
+    <title>authentication</title>
+    <link>https://semi0x3b.github.io/tags/authentication</link>
+    <guid>https://semi0x3b.github.io/tags/authentication</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 08 Sep 2026 14:26:24 GMT</pubDate>
+    <pubDate>Tue, 08 Sep 2026 14:27:32 GMT</pubDate>
   </item><item>
-    <title>terraform</title>
-    <link>https://semi0x3b.github.io/tags/terraform</link>
-    <guid>https://semi0x3b.github.io/tags/terraform</guid>
+    <title>authorization</title>
+    <link>https://semi0x3b.github.io/tags/authorization</link>
+    <guid>https://semi0x3b.github.io/tags/authorization</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 08 Sep 2026 14:26:24 GMT</pubDate>
+    <pubDate>Tue, 08 Sep 2026 14:27:32 GMT</pubDate>
   </item><item>
-    <title>migration</title>
-    <link>https://semi0x3b.github.io/tags/migration</link>
-    <guid>https://semi0x3b.github.io/tags/migration</guid>
+    <title>microservices</title>
+    <link>https://semi0x3b.github.io/tags/microservices</link>
+    <guid>https://semi0x3b.github.io/tags/microservices</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 08 Sep 2026 14:26:24 GMT</pubDate>
+    <pubDate>Tue, 08 Sep 2026 14:27:32 GMT</pubDate>
   </item><item>
-    <title>python</title>
-    <link>https://semi0x3b.github.io/tags/python</link>
-    <guid>https://semi0x3b.github.io/tags/python</guid>
+    <title>service-to-service</title>
+    <link>https://semi0x3b.github.io/tags/service-to-service</link>
+    <guid>https://semi0x3b.github.io/tags/service-to-service</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 08 Sep 2026 14:26:24 GMT</pubDate>
+    <pubDate>Tue, 08 Sep 2026 14:27:32 GMT</pubDate>
   </item><item>
-    <title>sqlalchemy</title>
-    <link>https://semi0x3b.github.io/tags/sqlalchemy</link>
-    <guid>https://semi0x3b.github.io/tags/sqlalchemy</guid>
+    <title>fail-closed</title>
+    <link>https://semi0x3b.github.io/tags/fail-closed</link>
+    <guid>https://semi0x3b.github.io/tags/fail-closed</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 08 Sep 2026 14:26:24 GMT</pubDate>
+    <pubDate>Tue, 08 Sep 2026 14:27:32 GMT</pubDate>
   </item><item>
-    <title>troubleshooting</title>
-    <link>https://semi0x3b.github.io/tags/troubleshooting</link>
-    <guid>https://semi0x3b.github.io/tags/troubleshooting</guid>
+    <title>github-actions</title>
+    <link>https://semi0x3b.github.io/tags/github-actions</link>
+    <guid>https://semi0x3b.github.io/tags/github-actions</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 08 Sep 2026 14:26:24 GMT</pubDate>
+    <pubDate>Tue, 08 Sep 2026 14:27:32 GMT</pubDate>
   </item><item>
-    <title>voluptuous</title>
-    <link>https://semi0x3b.github.io/tags/voluptuous</link>
-    <guid>https://semi0x3b.github.io/tags/voluptuous</guid>
+    <title>cron</title>
+    <link>https://semi0x3b.github.io/tags/cron</link>
+    <guid>https://semi0x3b.github.io/tags/cron</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 08 Sep 2026 14:26:24 GMT</pubDate>
+    <pubDate>Tue, 08 Sep 2026 14:27:32 GMT</pubDate>
   </item>
     </channel>
   </rss>
