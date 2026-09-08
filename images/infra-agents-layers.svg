@@ -9,13 +9,13 @@
   <rect x="40" y="210" width="440" height="34" rx="5" fill="none" stroke="#e8590c" stroke-width="1.5"/>
 
   <g font-size="13" fill="currentColor">
-    <text x="56" y="42" font-weight="600">환경 사실</text>
+    <text x="56" y="42" font-weight="600">환경 값</text>
     <text x="180" y="42" opacity=".7">클러스터·네임스페이스·도메인·이미지 저장소 확정값</text>
     <text x="56" y="80" font-weight="600">함정 목록</text>
     <text x="180" y="80" opacity=".7">한 번 밟은 실수와 회피법, 번호로 관리</text>
     <text x="56" y="118" font-weight="600">진단 순서</text>
     <text x="180" y="118" opacity=".7">"Pod가 안 떠요" 에 대한 고정 4단계</text>
-    <text x="56" y="156" font-weight="600">손 뗄 경계</text>
+    <text x="56" y="156" font-weight="600">넘길 기준</text>
     <text x="180" y="156" opacity=".7">어떤 상황은 어느 에이전트로 넘기는가</text>
     <text x="56" y="194" font-weight="600">정책 결정 이력</text>
     <text x="180" y="194" opacity=".7">확정·거절한 선택과 재검토 조건, 날짜 포함</text>
