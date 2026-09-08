@@ -1,20 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -8 720 292" role="img" aria-label="배포와 비밀값 파이프라인: Git 매니페스트를 ArgoCD가 클러스터에 반영하고, OCI Vault 비밀값을 External Secrets가 쿠버네티스 Secret으로 만들며, cert-manager와 Kyverno가 인증서와 정책을 담당한다">
+  <rect x="0" y="-8" width="720" height="292" rx="8" fill="#FDFCFA"/>
   <style>
-    text { font-family: system-ui, -apple-system, sans-serif; fill: currentColor; }
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #2b2b2b; }
     .name { font-size: 13px; font-weight: 600; }
     .plain { font-size: 13px; }
     .sub { font-size: 11px; opacity: .7; }
     .edge-lbl { font-size: 11px; opacity: .7; }
-    .zone { fill: none; stroke: currentColor; stroke-width: 1; stroke-dasharray: 4 3; rx: 8; opacity: .3; }
+    .zone { fill: none; stroke: #2b2b2b; stroke-width: 1; stroke-dasharray: 4 3; rx: 8; opacity: .3; }
     .zone-lbl { font-size: 11px; font-weight: 600; opacity: .5; }
-    .box { fill: none; stroke: currentColor; stroke-width: 1.5; rx: 6; opacity: .55; }
+    .box { fill: none; stroke: #2b2b2b; stroke-width: 1.5; rx: 6; opacity: .55; }
     .box-src { fill: none; stroke: #7a6b99; stroke-width: 1.8; rx: 6; }
-    .flow { stroke: currentColor; stroke-width: 1.5; fill: none; opacity: .6; }
-    .flow-dot { stroke: currentColor; stroke-width: 1.3; fill: none; stroke-dasharray: 5 3; opacity: .5; }
+    .flow { stroke: #2b2b2b; stroke-width: 1.5; fill: none; opacity: .6; }
+    .flow-dot { stroke: #2b2b2b; stroke-width: 1.3; fill: none; stroke-dasharray: 5 3; opacity: .5; }
   </style>
   <defs>
     <marker id="g-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+      <path d="M0,0 L10,5 L0,10 z" fill="#2b2b2b"/>
     </marker>
   </defs>
 

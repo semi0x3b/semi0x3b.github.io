@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 330" role="img" aria-label="전문 에이전트 정의 파일 하나는 환경 값, 함정 목록, 진단 순서, 넘길 기준, 정책 결정 이력, 완료 조건의 여섯 부분으로 돼 있고 완료 조건이 마지막에 추가됐다" style="max-width:420px;width:100%;height:auto">
-  <g fill="none" stroke="currentColor" stroke-width="1.5">
+  <rect x="0" y="0" width="420" height="330" rx="8" fill="#FDFCFA"/>
+  <g fill="none" stroke="#2b2b2b" stroke-width="1.5">
     <rect x="20" y="16" width="380" height="44" rx="5"/>
     <rect x="20" y="66" width="380" height="44" rx="5"/>
     <rect x="20" y="116" width="380" height="44" rx="5"/>
@@ -8,7 +9,7 @@
   </g>
   <rect x="20" y="266" width="380" height="44" rx="5" fill="none" stroke="#e8590c" stroke-width="1.5"/>
 
-  <g font-size="14" fill="currentColor">
+  <g font-size="14" fill="#2b2b2b">
     <text x="36" y="35" font-weight="600">환경 값</text>
     <text x="36" y="52" font-size="12" opacity=".7">클러스터, 네임스페이스, 도메인, 이미지 저장소 확정값</text>
     <text x="36" y="85" font-weight="600">함정 목록</text>

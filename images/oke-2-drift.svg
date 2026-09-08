@@ -1,17 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" role="img" aria-label="terraform plan은 코드와 변수 파일과 실제 리소스를 함께 읽는데, 저장소 밖에 있던 변수 파일 탓에 운영 클러스터 교체와 인증 설정 삭제가 예고됐다">
+  <rect x="0" y="0" width="720" height="300" rx="8" fill="#FDFCFA"/>
   <style>
-    text { font-family: system-ui, -apple-system, sans-serif; fill: currentColor; }
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #2b2b2b; }
     .name { font-size: 13px; font-weight: 600; }
     .sub { font-size: 11px; opacity: .7; }
     .edge-lbl { font-size: 11px; opacity: .7; }
-    .box { fill: none; stroke: currentColor; stroke-width: 1.5; rx: 6; opacity: .55; }
+    .box { fill: none; stroke: #2b2b2b; stroke-width: 1.5; rx: 6; opacity: .55; }
     .box-base { fill: none; stroke: #43809c; stroke-width: 2; rx: 6; }
     .box-hot { fill: none; stroke: #e8590c; stroke-width: 2; rx: 6; }
-    .flow { stroke: currentColor; stroke-width: 1.5; fill: none; opacity: .6; }
+    .flow { stroke: #2b2b2b; stroke-width: 1.5; fill: none; opacity: .6; }
   </style>
   <defs>
     <marker id="d-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+      <path d="M0,0 L10,5 L0,10 z" fill="#2b2b2b"/>
     </marker>
   </defs>
 

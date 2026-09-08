@@ -1,24 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -8 860 628" role="img" aria-label="OKE 클러스터 트래픽 경로: 사용자 요청이 로드밸런서와 Kong 게이트웨이를 거쳐 Keycloak 토큰 검증 후 5개 서비스군에 도달하고, 각 서비스군은 전용 Redis와 배치 Job을 함께 쓴다">
+  <rect x="0" y="-8" width="860" height="628" rx="8" fill="#FDFCFA"/>
   <style>
-    text { font-family: system-ui, -apple-system, sans-serif; fill: currentColor; }
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #2b2b2b; }
     .name { font-size: 13px; font-weight: 600; }
     .plain { font-size: 13px; }
     .sub { font-size: 11px; opacity: .7; }
     .mono { font-size: 11px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; opacity: .7; }
     .edge-lbl { font-size: 11px; opacity: .7; }
-    .zone { fill: none; stroke: currentColor; stroke-width: 1; stroke-dasharray: 4 3; rx: 8; opacity: .3; }
+    .zone { fill: none; stroke: #2b2b2b; stroke-width: 1; stroke-dasharray: 4 3; rx: 8; opacity: .3; }
     .zone-lbl { font-size: 11px; font-weight: 600; opacity: .5; }
-    .box { fill: none; stroke: currentColor; stroke-width: 1.5; rx: 6; opacity: .55; }
+    .box { fill: none; stroke: #2b2b2b; stroke-width: 1.5; rx: 6; opacity: .55; }
     .box-kong { fill: none; stroke: #5a8c6e; stroke-width: 2; rx: 6; }
     .box-auth { fill: none; stroke: #c98a3d; stroke-width: 1.6; rx: 6; }
     .box-data { fill: none; stroke: #43809c; stroke-width: 1.6; rx: 6; }
-    .flow { stroke: currentColor; stroke-width: 1.6; fill: none; opacity: .6; }
+    .flow { stroke: #2b2b2b; stroke-width: 1.6; fill: none; opacity: .6; }
     .flow-auth { stroke: #c98a3d; stroke-width: 1.4; fill: none; }
     .flow-data { stroke: #43809c; stroke-width: 1.2; fill: none; stroke-dasharray: 3 2; opacity: .8; }
     .auth-lbl { font-size: 11px; fill: #c98a3d; }
   </style>
   <defs>
-    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2b2b2b"/></marker>
     <marker id="ah-auth" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c98a3d"/></marker>
   </defs>
 

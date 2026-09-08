@@ -1,16 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 250" role="img" aria-label="Terraform 스택 구조: platform 스택이 VCN·OKE·Vault·IAM을 만들고 데이터베이스, Keycloak, SaaS, 채용, 부트캠프 다섯 스택이 그 위에 나란히 얹힌다">
+  <rect x="0" y="0" width="640" height="250" rx="8" fill="#FDFCFA"/>
   <style>
-    text { font-family: system-ui, -apple-system, sans-serif; fill: currentColor; }
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #2b2b2b; }
     .name { font-size: 13px; }
     .sub { font-size: 11px; opacity: .7; }
     .edge-lbl { font-size: 11px; opacity: .7; }
-    .box { fill: none; stroke: currentColor; stroke-width: 1.5; rx: 6; opacity: .55; }
+    .box { fill: none; stroke: #2b2b2b; stroke-width: 1.5; rx: 6; opacity: .55; }
     .box-base { fill: none; stroke: #43809c; stroke-width: 2; rx: 6; }
-    .flow { stroke: currentColor; stroke-width: 1.5; fill: none; opacity: .6; }
+    .flow { stroke: #2b2b2b; stroke-width: 1.5; fill: none; opacity: .6; }
   </style>
   <defs>
     <marker id="s-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+      <path d="M0,0 L10,5 L0,10 z" fill="#2b2b2b"/>
     </marker>
   </defs>
 

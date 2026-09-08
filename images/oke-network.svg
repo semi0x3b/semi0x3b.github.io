@@ -1,21 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300" role="img" aria-label="dev 클러스터 네트워크: VCN 하나에 public·worker·api·db 서브넷을 두고, worker 서브넷에서 노드와 pod가 같은 IP 풀을 나눠 쓴다">
+  <rect x="0" y="0" width="700" height="300" rx="8" fill="#FDFCFA"/>
   <style>
-    text { font-family: system-ui, -apple-system, sans-serif; fill: currentColor; }
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #2b2b2b; }
     .name { font-size: 13px; font-weight: 600; }
     .plain { font-size: 13px; }
     .sub { font-size: 11px; opacity: .7; }
     .mono { font-size: 11px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; opacity: .7; }
     .edge-lbl { font-size: 11px; opacity: .7; }
-    .zone { fill: none; stroke: currentColor; stroke-width: 1; stroke-dasharray: 4 3; rx: 8; opacity: .3; }
+    .zone { fill: none; stroke: #2b2b2b; stroke-width: 1; stroke-dasharray: 4 3; rx: 8; opacity: .3; }
     .zone-lbl { font-size: 11px; font-weight: 600; opacity: .5; }
-    .box { fill: none; stroke: currentColor; stroke-width: 1.5; rx: 6; opacity: .55; }
+    .box { fill: none; stroke: #2b2b2b; stroke-width: 1.5; rx: 6; opacity: .55; }
     .box-hot { fill: none; stroke: #e8590c; stroke-width: 2; rx: 6; }
     .hot-txt { fill: #e8590c; font-size: 11px; }
-    .flow { stroke: currentColor; stroke-width: 1.5; fill: none; opacity: .6; }
+    .flow { stroke: #2b2b2b; stroke-width: 1.5; fill: none; opacity: .6; }
   </style>
   <defs>
     <marker id="n-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-      <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+      <path d="M0,0 L10,5 L0,10 z" fill="#2b2b2b"/>
     </marker>
   </defs>
 

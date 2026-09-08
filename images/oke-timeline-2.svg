@@ -1,10 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 340" role="img" aria-label="EKS에서 OKE로 2편 타임라인: 7월 7일 plan이 클러스터 교체를 예고해 apply 보류, 7월 8일 인프라 전체 실측 다이어그램, 7월 13일 로그인 결함 3건 수정, 7월 21일부터 24일까지 비밀번호 정책과 세션 정합, 7월 22일 pod 슬롯 110 시도와 롤백, 7월 28일 readinessProbe 사고, 7월 29일 DNS 컷오버, 7월 30일부터 31일까지 인증서 마무리와 슬롯 만석 해소">
+  <rect x="0" y="0" width="700" height="340" rx="8" fill="#FDFCFA"/>
   <style>
-    text { font-family: system-ui, -apple-system, sans-serif; fill: currentColor; }
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #2b2b2b; }
     .date { font-size: 13px; font-weight: 600; }
     .desc { font-size: 12px; opacity: .75; }
-    .axis { stroke: currentColor; stroke-width: 1.5; opacity: .35; }
-    .dot { fill: currentColor; opacity: .8; }
+    .axis { stroke: #2b2b2b; stroke-width: 1.5; opacity: .35; }
+    .dot { fill: #2b2b2b; opacity: .8; }
     .dot-hl { fill: #43809c; }
   </style>
 

@@ -1,10 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300" role="img" aria-label="EKS에서 OKE로 1편 타임라인: 4월 21일 채용 시스템 설계 시작, 4월 27일 기존 테넌시 확장으로 방향 전환, 5월 4일 설계 확정, 5월 6~8일 dev 부트스트랩 자동화와 Keycloak 26 구축, 5월 13일 OKE 3단 업그레이드, 6월 19일 dev 배치 스케줄 컷오버, 6월 23일 ephemeral-storage 사태로 boot volume 100GB 상향">
+  <rect x="0" y="0" width="700" height="300" rx="8" fill="#FDFCFA"/>
   <style>
-    text { font-family: system-ui, -apple-system, sans-serif; fill: currentColor; }
+    text { font-family: system-ui, -apple-system, sans-serif; fill: #2b2b2b; }
     .date { font-size: 13px; font-weight: 600; }
     .desc { font-size: 12px; opacity: .75; }
-    .axis { stroke: currentColor; stroke-width: 1.5; opacity: .35; }
-    .dot { fill: currentColor; opacity: .8; }
+    .axis { stroke: #2b2b2b; stroke-width: 1.5; opacity: .35; }
+    .dot { fill: #2b2b2b; opacity: .8; }
     .dot-hl { fill: #43809c; }
   </style>
 
