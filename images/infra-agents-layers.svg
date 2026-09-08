@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 250" role="img" aria-label="전문 에이전트 정의 파일 하나는 환경 사실, 함정 목록, 진단 순서, 손 떼야 할 경계, 정책 결정 이력, 완료 조건의 여섯 층으로 쌓여 있고 맨 아래 층이 이번에 추가됐다" style="max-width:100%;height:auto">
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="40" y="20" width="440" height="34" rx="5"/>
+    <rect x="40" y="58" width="440" height="34" rx="5"/>
+    <rect x="40" y="96" width="440" height="34" rx="5"/>
+    <rect x="40" y="134" width="440" height="34" rx="5"/>
+    <rect x="40" y="172" width="440" height="34" rx="5"/>
+  </g>
+  <rect x="40" y="210" width="440" height="34" rx="5" fill="none" stroke="#e8590c" stroke-width="1.5"/>
+
+  <g font-size="13" fill="currentColor">
+    <text x="56" y="42" font-weight="600">환경 사실</text>
+    <text x="180" y="42" opacity=".7">클러스터·네임스페이스·도메인·이미지 저장소 확정값</text>
+    <text x="56" y="80" font-weight="600">함정 목록</text>
+    <text x="180" y="80" opacity=".7">한 번 밟은 실수와 회피법, 번호로 관리</text>
+    <text x="56" y="118" font-weight="600">진단 순서</text>
+    <text x="180" y="118" opacity=".7">"Pod가 안 떠요" 에 대한 고정 4단계</text>
+    <text x="56" y="156" font-weight="600">손 뗄 경계</text>
+    <text x="180" y="156" opacity=".7">어떤 상황은 어느 에이전트로 넘기는가</text>
+    <text x="56" y="194" font-weight="600">정책 결정 이력</text>
+    <text x="180" y="194" opacity=".7">확정·거절한 선택과 재검토 조건, 날짜 포함</text>
+    <text x="56" y="232" font-weight="600" fill="#e8590c">완료 조건</text>
+    <text x="180" y="232" opacity=".7">실측 가능한 항목 4~6개, 검수자가 대조</text>
+  </g>
+
+  <g font-size="11" fill="#e8590c">
+    <text x="510" y="232">오늘 추가한 층</text>
+  </g>
+</svg>

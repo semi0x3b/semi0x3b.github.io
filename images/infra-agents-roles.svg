@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" role="img" aria-label="헤드 세션이 요청을 환경·도메인별 전문 에이전트에 넘기고, 전문 에이전트의 완료 보고는 읽기 전용 검수자가 완료 조건과 대조한 뒤 헤드로 돌아온다" style="max-width:100%;height:auto">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="currentColor"/>
+    </marker>
+    <marker id="ar-x" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#e8590c"/>
+    </marker>
+  </defs>
+
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="20" y="120" width="120" height="60" rx="6"/>
+    <rect x="260" y="30" width="240" height="240" rx="8" stroke-dasharray="5 4" opacity=".5"/>
+    <rect x="280" y="56" width="200" height="40" rx="6"/>
+    <rect x="280" y="110" width="200" height="40" rx="6"/>
+    <rect x="280" y="164" width="200" height="40" rx="6"/>
+    <rect x="280" y="218" width="200" height="40" rx="6"/>
+  </g>
+  <rect x="600" y="120" width="140" height="60" rx="6" fill="none" stroke="#e8590c" stroke-width="1.5"/>
+
+  <g font-size="13" text-anchor="middle" fill="currentColor">
+    <text x="80" y="145" font-weight="600">헤드 세션</text>
+    <text x="80" y="164" font-size="11" opacity=".7">요청 분배·최종 판단</text>
+    <text x="380" y="46" font-size="11" opacity=".7">전문 에이전트 8개</text>
+    <text x="380" y="81">환경별 3 (dev·stg·prod)</text>
+    <text x="380" y="135">서비스별 3 (채용·LMS·커뮤니티)</text>
+    <text x="380" y="189">배포 도구 1 (릴리스 이관)</text>
+    <text x="380" y="243">클라우드 권한 1 (IAM)</text>
+    <text x="670" y="145" font-weight="600" fill="#e8590c">검수자</text>
+    <text x="670" y="164" font-size="11" opacity=".7">읽기 전용</text>
+  </g>
+
+  <g stroke="currentColor" stroke-width="1.5" fill="none">
+    <line x1="140" y1="140" x2="258" y2="140" marker-end="url(#ar)"/>
+    <line x1="500" y1="150" x2="598" y2="150" marker-end="url(#ar)"/>
+  </g>
+  <path d="M670 180 L670 290 L80 290 L80 182" stroke="#e8590c" stroke-width="1.5" fill="none" marker-end="url(#ar-x)"/>
+
+  <g font-size="11" fill="currentColor" text-anchor="middle">
+    <text x="199" y="132">요청 위임</text>
+    <text x="549" y="142">"완료" 보고</text>
+    <text x="375" y="284" fill="#e8590c">완료 조건 항목별 PASS/FAIL 표</text>
+  </g>
+</svg>
