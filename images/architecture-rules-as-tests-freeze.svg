@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 470" role="img" aria-label="계약을 켤 때 이미 있던 위반은 예외 목록에 적어 두고 새 위반만 막은 뒤, 위반을 고칠 때마다 목록에서 지워 0줄로 만든다" font-family="-apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif">
+  <defs>
+    <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2b2b2b"/></marker>
+  </defs>
+  <rect x="0" y="0" width="420" height="470" fill="#FDFCFA"/>
+  <g font-size="13" fill="#2b2b2b" text-anchor="middle">
+    <rect x="60" y="16" width="300" height="46" rx="6" fill="#FDFCFA" stroke="#2b2b2b"/>
+    <text x="210" y="44">규칙을 켜고 전체 코드를 검사해요</text>
+    <rect x="60" y="112" width="300" height="46" rx="6" fill="#FDFCFA" stroke="#2b2b2b"/>
+    <text x="210" y="140">이미 있던 위반을 예외 목록에 적어요</text>
+    <rect x="60" y="208" width="300" height="64" rx="6" fill="#FDFCFA" stroke="#e8590c" stroke-width="2"/>
+    <text x="210" y="236" font-weight="600">PR마다 CI가 검사해요</text>
+    <text x="210" y="256" font-size="12" fill-opacity=".7">목록에 없는 위반만 실패</text>
+    <rect x="60" y="322" width="300" height="46" rx="6" fill="#FDFCFA" stroke="#2b2b2b"/>
+    <text x="210" y="350">위반을 고칠 때마다 목록에서 지워요</text>
+    <rect x="60" y="418" width="300" height="36" rx="6" fill="#FDFCFA" stroke="#2b2b2b"/>
+    <text x="210" y="441" font-weight="600">예외 목록 0줄</text>
+  </g>
+  <g stroke="#2b2b2b" marker-end="url(#b)">
+    <line x1="210" y1="62" x2="210" y2="111"/>
+    <line x1="210" y1="158" x2="210" y2="207"/>
+    <line x1="210" y1="272" x2="210" y2="321"/>
+    <line x1="210" y1="368" x2="210" y2="417"/>
+  </g>
+  <g font-size="12" fill="#2b2b2b" fill-opacity=".7">
+    <text x="220" y="92">위반 발견</text>
+    <text x="220" y="188">새 위반만 막는 상태로 가동</text>
+    <text x="220" y="302">따로 해소 작업</text>
+    <text x="220" y="398">전부 해소</text>
+  </g>
+</svg>

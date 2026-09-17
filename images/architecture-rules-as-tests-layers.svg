@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 520" role="img" aria-label="Admin과 Front 서비스는 각자 api, usecase, repo, schema 순서로만 import하고, 두 서비스는 공유 계층을 import할 수 있지만 서로와 공유 계층에서 서비스 쪽으로는 import할 수 없다" font-family="-apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2b2b2b"/></marker>
+  </defs>
+  <rect x="0" y="0" width="420" height="520" fill="#FDFCFA"/>
+  <rect x="16" y="16" width="180" height="262" rx="8" fill="none" stroke="#2b2b2b" stroke-opacity=".5" stroke-dasharray="5 4"/>
+  <rect x="224" y="16" width="180" height="262" rx="8" fill="none" stroke="#2b2b2b" stroke-opacity=".5" stroke-dasharray="5 4"/>
+  <text x="106" y="42" text-anchor="middle" font-size="13" font-weight="600" fill="#2b2b2b">Admin 서비스</text>
+  <text x="314" y="42" text-anchor="middle" font-size="13" font-weight="600" fill="#2b2b2b">Front 서비스</text>
+  <g font-size="13" fill="#2b2b2b" text-anchor="middle">
+    <rect x="56" y="60" width="100" height="30" rx="4" fill="#FDFCFA" stroke="#2b2b2b"/><text x="106" y="80">api</text>
+    <rect x="56" y="118" width="100" height="30" rx="4" fill="#FDFCFA" stroke="#2b2b2b"/><text x="106" y="138">usecase</text>
+    <rect x="56" y="176" width="100" height="30" rx="4" fill="#FDFCFA" stroke="#2b2b2b"/><text x="106" y="196">repo</text>
+    <rect x="56" y="234" width="100" height="30" rx="4" fill="#FDFCFA" stroke="#2b2b2b"/><text x="106" y="254">schema</text>
+    <rect x="264" y="60" width="100" height="30" rx="4" fill="#FDFCFA" stroke="#2b2b2b"/><text x="314" y="80">api</text>
+    <rect x="264" y="118" width="100" height="30" rx="4" fill="#FDFCFA" stroke="#2b2b2b"/><text x="314" y="138">usecase</text>
+    <rect x="264" y="176" width="100" height="30" rx="4" fill="#FDFCFA" stroke="#2b2b2b"/><text x="314" y="196">repo</text>
+    <rect x="264" y="234" width="100" height="30" rx="4" fill="#FDFCFA" stroke="#2b2b2b"/><text x="314" y="254">schema</text>
+  </g>
+  <g stroke="#2b2b2b" marker-end="url(#a)">
+    <line x1="106" y1="90" x2="106" y2="117"/><line x1="106" y1="148" x2="106" y2="175"/><line x1="106" y1="206" x2="106" y2="233"/>
+    <line x1="314" y1="90" x2="314" y2="117"/><line x1="314" y1="148" x2="314" y2="175"/><line x1="314" y1="206" x2="314" y2="233"/>
+  </g>
+  <g font-size="12" fill="#2b2b2b" fill-opacity=".7">
+    <text x="114" y="108">import</text><text x="114" y="166">import</text><text x="114" y="224">import</text>
+    <text x="322" y="108">import</text><text x="322" y="166">import</text><text x="322" y="224">import</text>
+  </g>
+  <line x1="198" y1="147" x2="222" y2="147" stroke="#e8590c" stroke-width="2"/>
+  <text x="210" y="138" text-anchor="middle" font-size="13" font-weight="600" fill="#e8590c">✕</text>
+  <g stroke="#2b2b2b" marker-end="url(#a)">
+    <line x1="106" y1="278" x2="106" y2="351"/>
+    <line x1="314" y1="278" x2="314" y2="351"/>
+  </g>
+  <g font-size="12" fill="#2b2b2b" fill-opacity=".7">
+    <text x="114" y="320">import 가능</text>
+    <text x="322" y="320">import 가능</text>
+  </g>
+  <rect x="16" y="352" width="388" height="64" rx="8" fill="#FDFCFA" stroke="#2b2b2b"/>
+  <text x="210" y="378" text-anchor="middle" font-size="13" font-weight="600" fill="#2b2b2b">공유 계층 (core · model · db · exception)</text>
+  <text x="210" y="400" text-anchor="middle" font-size="12" fill="#e8590c">✕ 서비스 코드 import 금지</text>
+  <g font-size="12" fill="#2b2b2b">
+    <text x="16" y="448"><tspan fill="#e8590c">✕</tspan> Admin과 Front는 서로 직접 import하지 않아요</text>
+    <text x="16" y="470">아래 계층이 위 계층을 import하는 것도 금지예요</text>
+    <text x="16" y="492" fill-opacity=".7">금지 규칙은 모두 import-linter 계약으로 검사해요</text>
+  </g>
+</svg>
