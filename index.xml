@@ -6,65 +6,65 @@
       <description>Last 10 notes on semicolon;</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>posts</title>
-    <link>https://semi0x3b.github.io/tags/posts</link>
-    <guid>https://semi0x3b.github.io/tags/posts</guid>
+    <title>runbook</title>
+    <link>https://semi0x3b.github.io/tags/runbook</link>
+    <guid>https://semi0x3b.github.io/tags/runbook</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 30 Sep 2026 01:30:35 GMT</pubDate>
+    <pubDate>Thu, 01 Oct 2026 00:11:41 GMT</pubDate>
   </item><item>
-    <title>kubernetes</title>
-    <link>https://semi0x3b.github.io/tags/kubernetes</link>
-    <guid>https://semi0x3b.github.io/tags/kubernetes</guid>
+    <title>subagent</title>
+    <link>https://semi0x3b.github.io/tags/subagent</link>
+    <guid>https://semi0x3b.github.io/tags/subagent</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 30 Sep 2026 01:30:35 GMT</pubDate>
+    <pubDate>Thu, 01 Oct 2026 00:11:41 GMT</pubDate>
   </item><item>
-    <title>oke</title>
-    <link>https://semi0x3b.github.io/tags/oke</link>
-    <guid>https://semi0x3b.github.io/tags/oke</guid>
+    <title>httpx</title>
+    <link>https://semi0x3b.github.io/tags/httpx</link>
+    <guid>https://semi0x3b.github.io/tags/httpx</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 30 Sep 2026 01:30:35 GMT</pubDate>
+    <pubDate>Thu, 01 Oct 2026 00:11:41 GMT</pubDate>
   </item><item>
-    <title>oci</title>
-    <link>https://semi0x3b.github.io/tags/oci</link>
-    <guid>https://semi0x3b.github.io/tags/oci</guid>
+    <title>external-api</title>
+    <link>https://semi0x3b.github.io/tags/external-api</link>
+    <guid>https://semi0x3b.github.io/tags/external-api</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 30 Sep 2026 01:30:35 GMT</pubDate>
+    <pubDate>Thu, 01 Oct 2026 00:11:41 GMT</pubDate>
   </item><item>
-    <title>terraform</title>
-    <link>https://semi0x3b.github.io/tags/terraform</link>
-    <guid>https://semi0x3b.github.io/tags/terraform</guid>
+    <title>silent-failure</title>
+    <link>https://semi0x3b.github.io/tags/silent-failure</link>
+    <guid>https://semi0x3b.github.io/tags/silent-failure</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 30 Sep 2026 01:30:35 GMT</pubDate>
+    <pubDate>Thu, 01 Oct 2026 00:11:41 GMT</pubDate>
   </item><item>
-    <title>migration</title>
-    <link>https://semi0x3b.github.io/tags/migration</link>
-    <guid>https://semi0x3b.github.io/tags/migration</guid>
+    <title>import-linter</title>
+    <link>https://semi0x3b.github.io/tags/import-linter</link>
+    <guid>https://semi0x3b.github.io/tags/import-linter</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 30 Sep 2026 01:30:35 GMT</pubDate>
+    <pubDate>Thu, 01 Oct 2026 00:11:41 GMT</pubDate>
   </item><item>
-    <title>python</title>
-    <link>https://semi0x3b.github.io/tags/python</link>
-    <guid>https://semi0x3b.github.io/tags/python</guid>
+    <title>architecture</title>
+    <link>https://semi0x3b.github.io/tags/architecture</link>
+    <guid>https://semi0x3b.github.io/tags/architecture</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 30 Sep 2026 01:30:35 GMT</pubDate>
+    <pubDate>Thu, 01 Oct 2026 00:11:41 GMT</pubDate>
   </item><item>
-    <title>sqlalchemy</title>
-    <link>https://semi0x3b.github.io/tags/sqlalchemy</link>
-    <guid>https://semi0x3b.github.io/tags/sqlalchemy</guid>
+    <title>ast</title>
+    <link>https://semi0x3b.github.io/tags/ast</link>
+    <guid>https://semi0x3b.github.io/tags/ast</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 30 Sep 2026 01:30:35 GMT</pubDate>
+    <pubDate>Thu, 01 Oct 2026 00:11:41 GMT</pubDate>
   </item><item>
-    <title>troubleshooting</title>
-    <link>https://semi0x3b.github.io/tags/troubleshooting</link>
-    <guid>https://semi0x3b.github.io/tags/troubleshooting</guid>
+    <title>pytest</title>
+    <link>https://semi0x3b.github.io/tags/pytest</link>
+    <guid>https://semi0x3b.github.io/tags/pytest</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 30 Sep 2026 01:30:35 GMT</pubDate>
+    <pubDate>Thu, 01 Oct 2026 00:11:41 GMT</pubDate>
   </item><item>
-    <title>voluptuous</title>
-    <link>https://semi0x3b.github.io/tags/voluptuous</link>
-    <guid>https://semi0x3b.github.io/tags/voluptuous</guid>
+    <title>ci</title>
+    <link>https://semi0x3b.github.io/tags/ci</link>
+    <guid>https://semi0x3b.github.io/tags/ci</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 30 Sep 2026 01:30:35 GMT</pubDate>
+    <pubDate>Thu, 01 Oct 2026 00:11:41 GMT</pubDate>
   </item>
     </channel>
   </rss>
