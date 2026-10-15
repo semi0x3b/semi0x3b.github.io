@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr"><head><title>OpenAI API 키를 잠그며 알게 된 것: IP 허용 목록, 모델 제한, 키 분리</title><meta charset="utf-8"/><link rel="preload" href="../index-3401bfb2.css" as="style"/><link rel="preload" href="../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM Plex Sans KR:wght@400;700&amp;family=IBM Plex Sans KR:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="semicolon;"/><meta property="og:title" content="OpenAI API 키를 잠그며 알게 된 것: IP 허용 목록, 모델 제한, 키 분리"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="OpenAI API 키를 잠그며 알게 된 것: IP 허용 목록, 모델 제한, 키 분리"/><meta name="twitter:description" content="OpenAI IP 허용 목록은 Coverage가 Not covered면 어디에도 적용되지 않아요. 모델 제한은 키가 아니라 프로젝트에 걸려요. 서비스 키로 직접 불러 확인하다가 폐기된 모델을 부르던 기능도 찾았어요."/><meta property="og:description" content="OpenAI IP 허용 목록은 Coverage가 Not covered면 어디에도 적용되지 않아요. 모델 제한은 키가 아니라 프로젝트에 걸려요. 서비스 키로 직접 불러 확인하다가 폐기된 모델을 부르던 기능도 찾았어요."/><meta property="og:image:alt" content="OpenAI IP 허용 목록은 Coverage가 Not covered면 어디에도 적용되지 않아요. 모델 제한은 키가 아니라 프로젝트에 걸려요. 서비스 키로 직접 불러 확인하다가 폐기된 모델을 부르던 기능도 찾았어요."/><meta property="twitter:domain" content="semi0x3b.github.io"/><meta property="og:url" content="https://semi0x3b.github.io/posts/2026-10-15-openai-api-key-lockdown"/><meta property="twitter:url" content="https://semi0x3b.github.io/posts/2026-10-15-openai-api-key-lockdown"/><link rel="icon" href="../static/icon.png"/><meta name="description" content="OpenAI IP 허용 목록은 Coverage가 Not covered면 어디에도 적용되지 않아요. 모델 제한은 키가 아니라 프로젝트에 걸려요. 서비스 키로 직접 불러 확인하다가 폐기된 모델을 부르던 기능도 찾았어요."/><meta name="generator" content="Quartz"/><link href="../index-3401bfb2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-0c764499.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-47237b4e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-9857b007.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-d3a1a224.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../static/contentIndex.json").then(data => data.json())</script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted%20Grotesk%3Awght%40400%3B700&amp;family=Source%20Sans%20Pro%3Aital%2Cwght%400%2C400%3B0%2C600%3B1%2C400%3B1%2C600&amp;family=IBM%20Plex%20Mono%3Awght%40400%3B600&amp;display=swap"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://semi0x3b.github.io/posts/2026-10-15-openai-api-key-lockdown-og-image.webp"/><meta property="og:image:url" content="https://semi0x3b.github.io/posts/2026-10-15-openai-api-key-lockdown-og-image.webp"/><meta name="twitter:image" content="https://semi0x3b.github.io/posts/2026-10-15-openai-api-key-lockdown-og-image.webp"/><meta property="og:image:type" content="image/webp"/></head><body data-slug="posts/2026-10-15-openai-api-key-lockdown" data-basepath><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title "><a href="..">semicolon<span class="title-semi">;</span><span class="title-cursor" aria-hidden="true"></span></a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="검색" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>검색</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="검색어를 입력하세요" placeholder="검색어를 입력하세요"/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="다크 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="다크 모드"><title>다크 모드</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="라이트 모드"><title>라이트 모드</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="리더 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="리더 모드"><title>리더 모드</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-24" aria-label="탐색기"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>탐색기</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-24" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../posts/">문제; 해결</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>OpenAI API 키를 잠그며 알게 된 것: IP 허용 목록, 모델 제한, 키 분리</a></div></nav><h1 class="article-title">OpenAI API 키를 잠그며 알게 된 것: IP 허용 목록, 모델 제한, 키 분리</h1><p show-comma="true" class="content-meta"><time datetime="2026-10-15T00:00:00.000Z">2026년 10월 15일</time><span>19 min read</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><p>OpenAI 사용 기록(Logs)에 서비스 코드가 쓰지 않는 모델 이름이 찍혀 있었어요.</p>
+<pre><code>Input     Output                          Model
+hi        Hi! How can I help you today?   gpt-6-astra
+…
+say OK    OK                              gpt-5.5-2026-04-23
+…
+</code></pre>
+<p>Logs 목록 화면에는 어느 키와 어느 주소에서 온 호출인지 나오지 않아서 출처를 가릴 수 없었어요. 키 유출이 의심되는 정황은 따로 있었고, 키를 바꾸면서 OpenAI 쪽 설정을 다시 봤어요. IP 허용 목록은 만들어져 있었지만 화면상 어느 범위에도 적용되지 않은 상태였어요. 모델 제한은 아예 없었어요.</p>
+<ul>
+<li>OpenAI IP 허용 목록은 적용 범위(Coverage)를 지정해야 조직이나 프로젝트에 붙어요. 화면에 <code>Not covered</code>로 나오면 어디에도 붙지 않은 상태예요.</li>
+<li>모델 제한은 키가 아니라 프로젝트에 걸려요. 프로젝트는 조직 안에서 키를 묶는 단위예요. 한 프로젝트에 여러 서비스의 키가 있으면 모든 서비스가 쓰는 모델을 합쳐 허용 모델 목록에 넣어요.</li>
+<li>서비스가 쓰는 키로 호출해 보니 허용하지 않은 모델은 403으로 막혔어요. 그 과정에서 이미 폐기된 모델을 부르던 기능도 찾았어요.</li>
+</ul>
+<p>키는 쿠버네티스 위의 서비스에 이렇게 들어가요.</p>
+<pre><code>OCI Vault(비밀 저장소) ─ ESO가 복사 → 쿠버네티스 Secret ─ 파드가 시작할 때 읽음 → 환경변수
+</code></pre>
+<p>External Secrets Operator(ESO)는 외부 비밀 저장소의 값을 쿠버네티스 Secret으로 옮겨 주는 도구예요. 일부 서비스는 AWS Secrets Manager에서 키를 직접 읽어요.</p>
+<p>유출을 판단한 근거와 경로는 이 글에서 다루지 않아요.</p>
+<h2 id="잠그는-장치는-걸리는-단위가-서로-달라요">잠그는 장치는 걸리는 단위가 서로 달라요<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#잠그는-장치는-걸리는-단위가-서로-달라요" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>IP 허용 목록, 모델 제한, 키 분리는 걸리는 단위가 서로 달라요. IP 허용 목록과 모델 제한은 새어 나간 키로 할 수 있는 일을 줄여요. 키 분리는 키가 샜을 때 바꿀 범위를 줄여요.</p>
+<p>OpenAI 계정은 조직 안에 프로젝트를 여러 개 둘 수 있어요. API 키는 프로젝트 안에서 발급해요.</p>
+<pre><code>조직 ─ IP 허용 목록 (Coverage로 조직이나 프로젝트를 지정)
+ └ 프로젝트 ─ 모델 제한
+     ├ 키 (서비스 A)
+     └ 키 (서비스 B)
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>장치</th><th>걸리는 단위</th><th>설정 위치</th><th>효과</th></tr></thead><tbody><tr><td>IP 허용 목록</td><td>조직 또는 프로젝트</td><td>조직 설정의 IP allowlists</td><td>목록 밖 주소의 호출을 막아요</td></tr><tr><td>모델 제한</td><td>프로젝트</td><td>프로젝트 설정의 Limits(Model usage)</td><td>허용하지 않은 모델 호출을 막아요</td></tr><tr><td>키 분리</td><td>키</td><td>API keys</td><td>한 키가 새도 그 키를 쓰는 곳만 바꿔요</td></tr></tbody></table></div>
+<p>IP 허용 목록과 모델 제한은 키마다 따로 걸 수 없어요. 한 프로젝트의 키를 쓰는 서비스를 전부 알아야 허용할 주소와 모델을 채울 수 있어서, 키가 쓰이는 곳부터 찾았어요.</p>
+<h2 id="키가-쓰이는-곳부터-찾아요">키가 쓰이는 곳부터 찾아요<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#키가-쓰이는-곳부터-찾아요" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>옛 키 하나가 여러 비밀 저장소와 서비스에 퍼져 있었어요.</p>
+<ul>
+<li><strong>쓰는 서비스</strong>: 4개</li>
+<li><strong>들어 있는 비밀 저장소</strong>: 6곳(OCI Vault 4곳, AWS Secrets Manager 2곳)</li>
+<li><strong>같은 값을 담은 환경변수</strong>: 한 파드 안에 이름이 다른 3개</li>
+</ul>
+<p>파드 안에서는 키가 옛 키로 끝나는지만 비교하고 결과만 출력했어요.</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">kubectl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> exec</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> deploy/</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">&lt;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">서비</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">스</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">></span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> --</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> -c</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> 'env | grep -i openai | while IFS=&quot;=&quot; read -r k v; do</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">  case &quot;$v&quot; in *&lt;옛 키 끝 4자리>) echo &quot;$k=옛 키&quot;;; &quot;&quot;) echo &quot;$k=빈 값&quot;;; *) echo &quot;$k=다른 키&quot;;; esac</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">done'</span></span></code></pre></figure>
+<p>파일을 <code>grep -r</code>로 뒤질 때는 <code>-l</code>로 파일 이름만 받아요. 그냥 찾으면 일치한 줄이 통째로 출력돼서 키 원문이 화면에 찍혀요. 조사 중에 한 번 실제로 그렇게 찍혔어요.</p>
+<p>비밀 저장소 밖에서도 옛 키가 나왔어요. Helm은 배포할 때마다 넣은 설정값(values)을 Secret에 기록해 둬요. Argo CD(배포 도구)는 Application 리소스에 values를 직접 적으면 그 값이 리소스 정의(spec)에 평문으로 남아요.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>위치</th><th>확인 방법</th></tr></thead><tbody><tr><td>쿠버네티스 Secret</td><td><code>kubectl get secret -A -o json</code>을 디코드해 값이 옛 키로 끝나는지 비교해요</td></tr><tr><td>Helm 릴리스 기록</td><td><code>owner=helm</code> 레이블 Secret의 <code>release</code> 값을 base64 두 번, gzip 한 번 풀어 옛 키의 긴 조각을 찾아요</td></tr><tr><td>Argo CD Application spec</td><td><code>kubectl get applications -A -o json</code>에서 옛 키의 긴 조각을 찾아요</td></tr></tbody></table></div>
+<p>값 하나를 통째로 비교할 때는 끝 4자리로 충분해요. Helm 기록이나 Application JSON처럼 큰 텍스트에서 찾을 때는 끝 4자리가 다른 값과 우연히 일치할 수 있어서, 끝 12자리처럼 긴 조각을 써요.</p>
+<p>ESO가 만든 Secret은 저장소의 새 값으로 다시 채워져요. Argo CD values로 만든 Secret은 ESO가 관리하지 않아서 values를 고치기 전까지 바뀌지 않아요. Helm 기록과 Argo CD spec에 남은 옛 키도 그대로예요. 이런 곳은 OpenAI에서 옛 키를 폐기해야 쓸모가 없어져요.</p>
+<h2 id="허용할-ip는-파드-안에서-잰-주소예요">허용할 IP는 파드 안에서 잰 주소예요<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#허용할-ip는-파드-안에서-잰-주소예요" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>허용할 주소는 서비스의 요청이 인터넷으로 나갈 때 찍히는 주소(출구 주소)예요. 클라우드 콘솔에서 짐작하지 않고 키를 쓰는 서비스 파드 안에서 직접 쟀어요.</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">kubectl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> exec</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> deploy/</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">&lt;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">서비</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">스</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">></span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> --</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> curl</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> -s</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> https://api.ipify.org</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># curl이 없는 이미지: wget -qO- https://api.ipify.org</span></span></code></pre></figure>
+<p>같은 클러스터의 파드는 모두 NAT 게이트웨이 주소 하나로 나갔어요. NAT 게이트웨이는 사설망 안의 요청을 공인 주소 하나로 모아 내보내는 장치예요. 개발과 운영 클러스터는 NAT가 달라서 출구 주소도 클러스터마다 하나씩이었어요. 쿠버네티스 밖에서 키를 읽는 배포(VM 등)가 있으면 그 출구 주소도 따로 재요.</p>
+<p>사무실 회선 주소는 기존 목록에 들어 있어서, 사무실에서 부르면 목록이 붙어 있든 아니든 똑같이 통과해요. 그래서 막히는지는 목록 밖 회선에서 봐야 해요.</p>
+<h2 id="coverage가-not-covered면-목록이-어디에도-붙지-않아요">Coverage가 Not covered면 목록이 어디에도 붙지 않아요<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#coverage가-not-covered면-목록이-어디에도-붙지-않아요" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>적용 범위를 지정하지 않은 허용 목록은 조직에도 프로젝트에도 붙어 있지 않아요. 화면에는 이렇게 나와 있었어요.</p>
+<pre><code>Name           IP ranges         Coverage
+ipallow_...    (허용 주소 목록)   Not covered
+</code></pre>
+<p>화면 안내문에는 조직 단위와 프로젝트 단위의 관계가 이렇게 적혀 있어요.</p>
+<blockquote>
+<p>Project-level coverage overrides organization-level coverage.</p>
+</blockquote>
+<p>조직과 프로젝트에 목록이 둘 다 붙어 있으면 그 프로젝트의 호출에는 프로젝트에 붙인 목록이 적용된다는 뜻이에요. 저는 서비스 키가 있는 프로젝트를 적용 범위로 지정했어요.</p>
+<ul>
+<li><strong>지정 순서</strong>: 목록을 다 채운 뒤 적용 범위를 지정해요. 순서를 바꾸면 출구 주소가 아직 목록에 없는 서비스의 호출이 막혀요. 안내문 기준으로 반영까지 최대 15분이 걸려요.</li>
+<li><strong>남은 확인</strong>: 목록 밖 회선에서 실제로 막히는지는 아직 확인하지 못했어요. 휴대폰 핫스팟처럼 목록에 없는 회선에서 호출해 볼 차례예요.</li>
+</ul>
+<h2 id="모델-제한은-프로젝트에-하나만-걸려요">모델 제한은 프로젝트에 하나만 걸려요<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#모델-제한은-프로젝트에-하나만-걸려요" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>허용하지 않은 모델을 부르면 이렇게 거부되는데, 메시지에 키가 아니라 프로젝트가 나와요.</p>
+<pre><code>403 model_not_found
+Project `proj_...` does not have access to model `gpt-6-astra`
+</code></pre>
+<p>서비스마다 다른 키로 불러도 메시지의 프로젝트는 같았어요. 그래서 허용 모델 목록 하나가 그 프로젝트의 모든 서비스에 똑같이 걸렸어요. 한 서비스만 쓰는 모델을 빠뜨리면 그 서비스가 막혀요.</p>
+<p>옛 키도 같은 프로젝트에 있어서 <code>gpt-6-astra</code>를 옛 키로 부르면 같은 403이 났어요. 옛 키를 폐기하기 전에도 모델 제한은 옛 키에 걸려 있어요.</p>
+<h2 id="허용할-모델은-코드와-설정에서-모아요">허용할 모델은 코드와 설정에서 모아요<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#허용할-모델은-코드와-설정에서-모아요" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>허용할 모델은 각 서비스의 코드와 설정에 적힌 모델 이름을 합친 목록이에요. 기본 브랜치에서 모델 이름 문자열을 모았어요.</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">git</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> grep</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> -h</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> -o</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> -I</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> -E</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;[</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string">\&quot;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string">\`</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">](gpt-[0-9][0-9a-z.\-]*|chatgpt-[0-9a-z.\-]+|o[1-9](-mini|-pro)?|text-embedding-[0-9a-z\-]+|whisper-1|tts-1(-hd)?|gpt-image-[0-9a-z.\-]+|dall-e-[23]|omni-moderation-[a-z\-]+|gpt-realtime[0-9a-z.\-]*)[</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string">\&quot;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string">\`</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">]&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string"> \</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">  origin/main</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> --</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> ':!*test*'</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> ':!*.md'</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function"> tr</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string">\&quot;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string">\`</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function"> sort</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function"> uniq</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> -c</span></span></code></pre></figure>
+<p>코드만 보면 놓치는 게 있었어요.</p>
+<ul>
+<li><strong>설정으로 바꾸는 모델</strong>: 환경변수로 모델 이름을 받는 서비스는 코드에 기본값만 있어요. 파드 환경변수의 모델 값도 확인해요.</li>
+<li><strong>선택 목록에 없는 이름</strong>: 코드에 있던 <code>gpt-5.2-chat-latest</code>는 Model usage 목록에서 고를 수 없었어요. 이미 폐기된 모델이라 검증 호출에서 404가 났어요.</li>
+</ul>
+<h2 id="응답-코드와-메시지로-허용-제한-폐기를-가려요">응답 코드와 메시지로 허용, 제한, 폐기를 가려요<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#응답-코드와-메시지로-허용-제한-폐기를-가려요" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>200은 허용, 403은 모델 제한, 404 <code>has been deprecated</code>는 모델 폐기예요. 설정을 저장한 뒤 서비스 파드 안에서 그 서비스의 키로 짧은 호출을 보내 확인했어요. 키를 파드 밖으로 꺼내지 않으려고 파드 안에서 실행했어요.</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">kubectl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> exec</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> -i</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> deploy/</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">&lt;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">서비</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">스</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">></span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> --</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> python3</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> -</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> &lt;&lt;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'EOF'</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">import os, json, urllib.request as u</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">key = os.environ[&quot;OPENAI_API_KEY&quot;]</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">for model in [&quot;gpt-4.1-mini&quot;, &quot;gpt-6-astra&quot;]:</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">    body = {&quot;model&quot;: model, &quot;messages&quot;: [{&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;ok&quot;}], &quot;max_completion_tokens&quot;: 16}</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">    req = u.Request(&quot;https://api.openai.com/v1/chat/completions&quot;, data=json.dumps(body).encode(),</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">                    headers={&quot;Authorization&quot;: &quot;Bearer &quot; + key, &quot;Content-Type&quot;: &quot;application/json&quot;})</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">    try:</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">        print(model, u.urlopen(req, timeout=60).status)</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">    except u.HTTPError as e:</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">        print(model, e.code, json.loads(e.read())[&quot;error&quot;][&quot;message&quot;][:80])</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">EOF</span></span></code></pre></figure>
+<p><code>OPENAI_API_KEY</code>는 그 서비스가 키를 담는 환경변수 이름으로 바꿔요.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>응답</th><th>뜻</th><th>본 모델</th></tr></thead><tbody><tr><td>200</td><td>허용됨</td><td>코드에서 쓰는 모델</td></tr><tr><td>403 <code>does not have access to model</code></td><td>모델 제한에 걸림</td><td><code>gpt-6-astra</code>, <code>gpt-6-sol</code>, <code>gpt-5.5</code></td></tr><tr><td>404 <code>has been deprecated</code></td><td>모델 자체가 폐기됨</td><td><code>gpt-5-chat-latest</code>, <code>gpt-5.1-chat-latest</code>, <code>gpt-5.2-chat-latest</code></td></tr></tbody></table></div>
+<p>폐기된 모델은 모델 제한과 상관없어요. 이 모델들은 어느 키로 불러도 404가 났어요. 메시지는 부르는 API마다 달랐어요.</p>
+<ul>
+<li><strong>Chat Completions API</strong>(<code>/v1/chat/completions</code>, 위 스크립트): 404 <code>has been deprecated</code></li>
+<li><strong>Responses API</strong>(<code>/v1/responses</code>): 404 <code>does not exist or you do not have access to it</code></li>
+</ul>
+<p>Responses API의 메시지에 access가 들어 있어도 403 모델 제한이 아니라 폐기예요.</p>
+<p><code>gpt-5.1-chat-latest</code>를 쓰던 기능은 이미 실패하고 있었어요. 한 서비스가 Responses API로 이 모델을 불러서 운영 로그에 같은 오류가 남아 있었어요. 오류는 모델 제한을 걸기 전 날짜부터 찍혀 있어서 이번 제한 때문에 생긴 실패가 아니었어요. 고치려면 코드의 모델 이름을 바꿔야 해요.</p>
+<h2 id="공용-키는-목적에-맞게-나눠요">공용 키는 목적에 맞게 나눠요<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#공용-키는-목적에-맞게-나눠요" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>여러 서비스가 같이 쓰던 공용 키를 목적에 맞게 나눠 새로 발급했어요. 키 하나를 여러 곳이 같이 쓰면 교체할 때마다 그 곳을 전부 건드려야 해요.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th></th><th>공용 키</th><th>목적별 키</th></tr></thead><tbody><tr><td>한 키가 새면 고칠 비밀 저장소</td><td>6곳</td><td>그 키를 쓰는 곳만</td></tr><tr><td>재시작할 서비스</td><td>4개</td><td>그 키를 쓰는 서비스만</td></tr></tbody></table></div>
+<p>키를 나눠도 같은 프로젝트에 있으면 모델 제한과 IP 허용 목록은 똑같이 걸려요. 키마다 막는 범위를 다르게 하려면 프로젝트를 나눠야 해요.</p>
+<h2 id="키를-바꿔도-새-키가-닿지-않는-곳이-있어요">키를 바꿔도 새 키가 닿지 않는 곳이 있어요<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#키를-바꿔도-새-키가-닿지-않는-곳이-있어요" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>저장소 값을 바꿔도 새 키가 닿지 않는 곳이 있었어요. 가장 놓치기 쉬운 건 재시작하지 않은 파드였어요.</p>
+<ul>
+<li>
+<p><strong>재시작하지 않은 파드</strong>: 환경변수는 컨테이너가 시작할 때 한 번 읽어요. 교체 전에 시작한 파드는 Secret이 새 키로 바뀐 뒤에도 환경변수에 옛 키가 그대로 남아 있었어요.</p>
+</li>
+<li>
+<p><strong>비어 버린 키</strong>: 같은 값을 담던 환경변수 3개 중 1개가 교체 과정에서 빈 값이 됐어요. 그 환경변수를 읽는 클라이언트를 파드 안에서 만들어 호출해 보니 이렇게 실패했어요.</p>
+<pre><code>401 Missing bearer authentication in header
+</code></pre>
+<p>OpenAI 파이썬 클라이언트는 빈 문자열을 키로 받아도 클라이언트를 만들 때는 오류를 내지 않아요. 실패는 첫 호출에서야 나와요.</p>
+</li>
+<li>
+<p><strong>이미지 안의 <code>.env</code></strong>: 다른 서비스의 이미지에서 OpenAI 키가 든 <code>.env</code> 파일이 나왔어요. 빌드할 때 복사된 파일이라 Secret을 바꿔도 이 값은 그대로예요. <code>.env</code>를 빌드에서 빼고 키는 Secret으로 받게 옮겨요.</p>
+</li>
+</ul>
+<p>옛 키는 맨 마지막에 폐기해요. 먼저 폐기하면 재시작하지 않은 파드가 401로 실패해요. 폐기 전에는 허용 모델을 옛 키로 불러도 200이 나와서, 옛 키가 막혔는지는 폐기한 뒤 401이 나는지로 확인해요. 한 서비스만 쓰던 키는 새 키로 200이 나는 걸 확인하고 폐기했어요. 폐기한 키로 불러 보니 401이 났어요.</p>
+<h2 id="적용한-뒤-이렇게-확인해요">적용한 뒤 이렇게 확인해요<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#적용한-뒤-이렇게-확인해요" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul class="contains-task-list">
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> IP 허용 목록의 Coverage가 <code>Not covered</code>가 아닌지 화면에서 봐요.</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> 허용한 주소가 파드 안에서 잰 출구 주소와 같은지 <code>curl -s https://api.ipify.org</code>로 봐요. 쿠버네티스 밖 배포의 출구 주소도 같이 봐요.</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> 목록 밖 회선(휴대폰 핫스팟 등)에서 호출해 거부되는지 봐요. 사무실 회선이 목록에 있으면 사무실에서는 확인이 안 돼요.</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> 허용 모델이 코드의 모델 이름과 파드 환경변수의 모델 값을 모두 포함하는지 <code>git grep</code> 결과와 대조해요.</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> 서비스마다 자기 키로 허용 모델은 200, 막을 모델은 403이 나는지 파드 안에서 호출해 봐요.</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> 404가 나는 모델이 코드에 남아 있지 않은지 같은 호출로 봐요. 메시지는 API마다 달라요.</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> 키를 바꾼 뒤 모든 파드를 재시작하고, 파드 환경변수가 새 키로 끝나는지 봐요.</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> 키 환경변수 중 빈 값이 없는지 같은 대조에서 봐요.</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> 컨테이너 안에 키가 든 <code>.env</code>가 없는지 <code>ls -a</code>로 작업 디렉토리를 봐요.</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> 옛 키를 폐기한 뒤 옛 키 호출이 401로 바뀌는지 봐요.</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> Logs에 코드에 없는 모델 호출이 더 찍히지 않는지 봐요.</li>
+</ul></div></article><hr/><div class="page-footer"><nav class="continue-footer"><div class="continue-line">계속됩니다<span class="continue-semi">;</span></div><div class="continue-links"><a class="internal" href="../posts/2026-10-15-collector-explicit-license-only">← robots.txt가 열려 있어도 가져다 써도 된다는 뜻은 아니었어요</a><span></span></div></nav></div></div><div class="right sidebar"><div class="graph"><h3>그래프 뷰</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-22" aria-expanded="true"><h3>목차</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#잠그는-장치는-걸리는-단위가-서로-달라요" data-for="잠그는-장치는-걸리는-단위가-서로-달라요">잠그는 장치는 걸리는 단위가 서로 달라요</a></li><li class="depth-0"><a href="#키가-쓰이는-곳부터-찾아요" data-for="키가-쓰이는-곳부터-찾아요">키가 쓰이는 곳부터 찾아요</a></li><li class="depth-0"><a href="#허용할-ip는-파드-안에서-잰-주소예요" data-for="허용할-ip는-파드-안에서-잰-주소예요">허용할 IP는 파드 안에서 잰 주소예요</a></li><li class="depth-0"><a href="#coverage가-not-covered면-목록이-어디에도-붙지-않아요" data-for="coverage가-not-covered면-목록이-어디에도-붙지-않아요">Coverage가 Not covered면 목록이 어디에도 붙지 않아요</a></li><li class="depth-0"><a href="#모델-제한은-프로젝트에-하나만-걸려요" data-for="모델-제한은-프로젝트에-하나만-걸려요">모델 제한은 프로젝트에 하나만 걸려요</a></li><li class="depth-0"><a href="#허용할-모델은-코드와-설정에서-모아요" data-for="허용할-모델은-코드와-설정에서-모아요">허용할 모델은 코드와 설정에서 모아요</a></li><li class="depth-0"><a href="#응답-코드와-메시지로-허용-제한-폐기를-가려요" data-for="응답-코드와-메시지로-허용-제한-폐기를-가려요">응답 코드와 메시지로 허용, 제한, 폐기를 가려요</a></li><li class="depth-0"><a href="#공용-키는-목적에-맞게-나눠요" data-for="공용-키는-목적에-맞게-나눠요">공용 키는 목적에 맞게 나눠요</a></li><li class="depth-0"><a href="#키를-바꿔도-새-키가-닿지-않는-곳이-있어요" data-for="키를-바꿔도-새-키가-닿지-않는-곳이-있어요">키를 바꿔도 새 키가 닿지 않는 곳이 있어요</a></li><li class="depth-0"><a href="#적용한-뒤-이렇게-확인해요" data-for="적용한-뒤-이렇게-확인해요">적용한 뒤 이렇게 확인해요</a></li><li class="overflow-end"></li></ul></div></div><undefined ctx="[object Object]" fileData="[object Object]" externalResources="[object Object]" cfg="[object Object]" tree="[object Object]" allFiles="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"></undefined></div></div></body><script src="../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../postscript-325b7d34.js" type="module" data-persist="true"></script></html>
