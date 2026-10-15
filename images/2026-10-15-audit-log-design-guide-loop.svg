@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 380" role="img" aria-label="GET 응답 본문까지 저장하는 설계에서는 감사 로그 목록 조회 응답이 새 감사 로그 행으로 저장되고, 그 행이 다음 조회 응답에 들어가 페이지가 계속 커진다" font-family="-apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2b2b2b"/>
+    </marker>
+    <marker id="arrA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#e8590c"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="400" height="380" fill="#FDFCFA"/>
+
+  <rect x="24" y="20" width="290" height="48" rx="8" fill="none" stroke="#2b2b2b" stroke-width="1.5"/>
+  <text x="169" y="49" text-anchor="middle" font-size="14" font-weight="600" fill="#2b2b2b">관리자가 감사 로그 목록 조회</text>
+
+  <line x1="169" y1="68" x2="169" y2="108" stroke="#2b2b2b" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="180" y="93" font-size="12" fill="#2b2b2b" opacity=".7">GET 요청</text>
+
+  <rect x="24" y="110" width="290" height="48" rx="8" fill="none" stroke="#2b2b2b" stroke-width="1.5"/>
+  <text x="169" y="139" text-anchor="middle" font-size="14" font-weight="600" fill="#2b2b2b">목록 API가 행을 본문째 응답</text>
+
+  <line x1="169" y1="158" x2="169" y2="198" stroke="#2b2b2b" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="180" y="183" font-size="12" fill="#2b2b2b" opacity=".7">응답이 미들웨어를 지남</text>
+
+  <rect x="24" y="200" width="290" height="48" rx="8" fill="none" stroke="#2b2b2b" stroke-width="1.5"/>
+  <text x="169" y="229" text-anchor="middle" font-size="14" font-weight="600" fill="#2b2b2b">미들웨어가 응답 본문을 저장</text>
+
+  <line x1="169" y1="248" x2="169" y2="288" stroke="#2b2b2b" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="180" y="273" font-size="12" fill="#2b2b2b" opacity=".7">새 행 추가</text>
+
+  <rect x="24" y="290" width="290" height="64" rx="8" fill="none" stroke="#e8590c" stroke-width="2"/>
+  <text x="169" y="317" text-anchor="middle" font-size="14" font-weight="600" fill="#2b2b2b">감사 로그 맨 앞에 새 행</text>
+  <text x="169" y="337" text-anchor="middle" font-size="12" fill="#e8590c">방금 본 첫 페이지를 통째로 담음</text>
+
+  <polyline points="314,322 360,322 360,134 316,134" fill="none" stroke="#e8590c" stroke-width="1.5" marker-end="url(#arrA)"/>
+  <text x="378" y="228" text-anchor="middle" font-size="12" fill="#e8590c" transform="rotate(-90 378 228)">다음 조회 응답에 포함</text>
+</svg>
