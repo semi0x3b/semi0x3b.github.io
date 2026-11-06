@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 564" role="img" aria-label="주황 점은 응답이 CORS 미들웨어를 지나며 헤더를 받는 지점이다. 고치기 전에는 CORS 미들웨어가 ServerErrorMiddleware 안쪽에 있어, 처리 안 된 예외로 만든 500 응답이 CORS 층을 지나지 않고 브라우저에 헤더 없이 도착한다. 처리된 400은 CORS 층을 지나 헤더가 붙는다. 고친 뒤에는 CORS가 가장 바깥이라 400과 500 모두 헤더가 붙는다." font-family="Pretendard, -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2b2b2b"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="420" height="564" fill="#FDFCFA"/>
+
+  <!-- 고치기 전 -->
+  <text x="16" y="22" font-size="13" font-weight="600" fill="#2b2b2b">고치기 전 · add_middleware로 추가</text>
+  <rect x="16" y="34" width="388" height="28" rx="4" fill="#FDFCFA" stroke="#2b2b2b" stroke-opacity=".5" class="box-browser"/>
+  <text x="28" y="53" font-size="13" fill="#2b2b2b">브라우저</text>
+  <text x="266" y="53" font-size="12" font-weight="600" fill="#e8590c" text-anchor="middle">헤더 없음</text>
+  <text x="352" y="53" font-size="12" fill="#2b2b2b" text-anchor="middle">헤더 있음</text>
+
+  <rect x="16" y="120" width="388" height="38" fill="#e8590c" fill-opacity=".08"/>
+
+  <rect x="16" y="74" width="190" height="38" rx="4" fill="#FDFCFA" stroke="#2b2b2b" class="box"/>
+  <text x="28" y="90" font-size="13" font-weight="600" fill="#2b2b2b">ServerErrorMiddleware</text>
+  <text x="28" y="105" font-size="12" fill="#2b2b2b" fill-opacity=".7">처리 안 된 예외 → 500</text>
+
+  <rect x="16" y="120" width="190" height="38" rx="4" fill="#FDFCFA" stroke="#e8590c" stroke-width="1.5" class="box"/>
+  <text x="28" y="136" font-size="13" font-weight="600" fill="#e8590c">CORSMiddleware</text>
+  <text x="28" y="151" font-size="12" fill="#2b2b2b" fill-opacity=".7">지나가는 응답에 헤더 추가</text>
+
+  <rect x="16" y="166" width="190" height="38" rx="4" fill="#FDFCFA" stroke="#2b2b2b" class="box"/>
+  <text x="28" y="182" font-size="13" font-weight="600" fill="#2b2b2b">ExceptionMiddleware</text>
+  <text x="28" y="197" font-size="12" fill="#2b2b2b" fill-opacity=".7">등록한 예외 → 400</text>
+
+  <rect x="16" y="212" width="190" height="38" rx="4" fill="#FDFCFA" stroke="#2b2b2b" class="box"/>
+  <text x="28" y="228" font-size="13" font-weight="600" fill="#2b2b2b">라우터·엔드포인트</text>
+  <text x="28" y="243" font-size="12" fill="#2b2b2b" fill-opacity=".7">예외 발생, 바깥으로 전달</text>
+
+  <path d="M206,93 L266,93 L266,64" fill="none" stroke="#2b2b2b" stroke-width="1.5" marker-end="url(#ah)" class="flow-500"/>
+  <text x="236" y="88" font-size="12" fill="#2b2b2b" text-anchor="middle">500</text>
+  <path d="M206,185 L352,185 L352,64" fill="none" stroke="#2b2b2b" stroke-width="1.5" marker-end="url(#ah)" class="flow-400"/>
+  <text x="236" y="180" font-size="12" fill="#2b2b2b" text-anchor="middle">400</text>
+  <circle cx="352" cy="139" r="4" fill="#e8590c"/>
+
+  <line x1="16" y1="266" x2="404" y2="266" stroke="#2b2b2b" stroke-opacity=".2"/>
+
+  <!-- 고친 뒤 -->
+  <text x="16" y="298" font-size="13" font-weight="600" fill="#2b2b2b">고친 뒤 · build_middleware_stack에서 감쌈</text>
+  <rect x="16" y="310" width="388" height="28" rx="4" fill="#FDFCFA" stroke="#2b2b2b" stroke-opacity=".5" class="box-browser"/>
+  <text x="28" y="329" font-size="13" fill="#2b2b2b">브라우저</text>
+  <text x="266" y="329" font-size="12" fill="#2b2b2b" text-anchor="middle">헤더 있음</text>
+  <text x="352" y="329" font-size="12" fill="#2b2b2b" text-anchor="middle">헤더 있음</text>
+
+  <rect x="16" y="350" width="388" height="38" fill="#e8590c" fill-opacity=".08"/>
+
+  <rect x="16" y="350" width="190" height="38" rx="4" fill="#FDFCFA" stroke="#e8590c" stroke-width="1.5" class="box"/>
+  <text x="28" y="366" font-size="13" font-weight="600" fill="#e8590c">CORSMiddleware</text>
+  <text x="28" y="381" font-size="12" fill="#2b2b2b" fill-opacity=".7">지나가는 응답에 헤더 추가</text>
+
+  <rect x="16" y="396" width="190" height="38" rx="4" fill="#FDFCFA" stroke="#2b2b2b" class="box"/>
+  <text x="28" y="412" font-size="13" font-weight="600" fill="#2b2b2b">ServerErrorMiddleware</text>
+  <text x="28" y="427" font-size="12" fill="#2b2b2b" fill-opacity=".7">처리 안 된 예외 → 500</text>
+
+  <rect x="16" y="442" width="190" height="38" rx="4" fill="#FDFCFA" stroke="#2b2b2b" class="box"/>
+  <text x="28" y="458" font-size="13" font-weight="600" fill="#2b2b2b">ExceptionMiddleware</text>
+  <text x="28" y="473" font-size="12" fill="#2b2b2b" fill-opacity=".7">등록한 예외 → 400</text>
+
+  <rect x="16" y="488" width="190" height="38" rx="4" fill="#FDFCFA" stroke="#2b2b2b" class="box"/>
+  <text x="28" y="504" font-size="13" font-weight="600" fill="#2b2b2b">라우터·엔드포인트</text>
+  <text x="28" y="519" font-size="12" fill="#2b2b2b" fill-opacity=".7">예외 발생, 바깥으로 전달</text>
+
+  <path d="M206,415 L266,415 L266,340" fill="none" stroke="#2b2b2b" stroke-width="1.5" marker-end="url(#ah)" class="flow-500-after"/>
+  <text x="236" y="410" font-size="12" fill="#2b2b2b" text-anchor="middle">500</text>
+  <circle cx="266" cy="369" r="4" fill="#e8590c"/>
+  <path d="M206,461 L352,461 L352,340" fill="none" stroke="#2b2b2b" stroke-width="1.5" marker-end="url(#ah)" class="flow-400-after"/>
+  <text x="236" y="456" font-size="12" fill="#2b2b2b" text-anchor="middle">400</text>
+  <circle cx="352" cy="369" r="4" fill="#e8590c"/>
+  <circle cx="22" cy="548" r="4" fill="#e8590c"/>
+  <text x="32" y="552" font-size="12" fill="#2b2b2b" fill-opacity=".7">응답이 CORS 미들웨어를 지나며 헤더를 받는 지점</text>
+</svg>
