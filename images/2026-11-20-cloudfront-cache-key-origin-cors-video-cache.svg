@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 486" role="img" aria-label="캐시 키에 Origin이 없으면 Origin 없는 요청이 먼저 오면 그 요청이 받은 CORS 헤더 없는 응답이 캐시에 저장되고, 나중에 온 crossorigin 요청도 그 응답을 받아 재생에 실패한다. 캐시 키에 Origin을 넣으면 Origin 없는 요청과 있는 요청의 응답이 따로 저장되어 crossorigin 요청은 늘 CORS 헤더가 붙은 응답을 받는다." font-family="Pretendard, -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2b2b2b"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="420" height="486" fill="#FDFCFA"/>
+
+  <!-- 캐시 키에 Origin이 없을 때 -->
+  <text x="16" y="22" font-size="13" font-weight="600" fill="#2b2b2b">캐시 키에 Origin이 없을 때 · ①이 먼저 온 경우</text>
+
+  <rect x="16" y="36" width="184" height="48" rx="4" fill="#FDFCFA" stroke="#2b2b2b" class="box"/>
+  <text x="28" y="56" font-size="13" font-weight="600" fill="#2b2b2b">① Origin 없는 요청</text>
+  <text x="28" y="74" font-size="12" fill="#2b2b2b" fill-opacity=".7">예: 다른 사이트 플레이어 · curl</text>
+
+  <rect x="220" y="36" width="184" height="48" rx="4" fill="#FDFCFA" stroke="#2b2b2b" class="box"/>
+  <text x="232" y="56" font-size="13" font-weight="600" fill="#2b2b2b">② crossorigin 요청</text>
+  <text x="232" y="74" font-size="12" fill="#2b2b2b" fill-opacity=".7">Origin: 사이트 주소</text>
+
+  <path d="M108,84 L108,126" fill="none" stroke="#2b2b2b" stroke-width="1.5" marker-end="url(#ah)" class="flow"/>
+  <text x="116" y="110" font-size="12" fill="#2b2b2b">먼저 와서 저장</text>
+  <path d="M312,84 L312,126" fill="none" stroke="#2b2b2b" stroke-width="1.5" marker-end="url(#ah)" class="flow"/>
+  <text x="320" y="110" font-size="12" fill="#2b2b2b">같은 응답 받음</text>
+
+  <rect x="16" y="128" width="388" height="68" rx="4" fill="#FDFCFA" stroke="#2b2b2b" stroke-opacity=".5" class="box"/>
+  <text x="28" y="148" font-size="13" font-weight="600" fill="#2b2b2b">CloudFront 캐시 키 = 영상 주소</text>
+  <rect x="28" y="158" width="364" height="28" rx="4" fill="#e8590c" fill-opacity=".08" stroke="#e8590c" stroke-width="1.5" class="slot"/>
+  <text x="210" y="177" font-size="12" font-weight="600" fill="#e8590c" text-anchor="middle">저장된 응답 · CORS 헤더 없음</text>
+
+  <text x="210" y="218" font-size="12" font-weight="600" fill="#e8590c" text-anchor="middle">②도 같은 응답을 받아 재생 실패</text>
+
+  <line x1="16" y1="238" x2="404" y2="238" stroke="#2b2b2b" stroke-opacity=".2"/>
+
+  <!-- 캐시 키에 Origin을 넣은 뒤 -->
+  <text x="16" y="264" font-size="13" font-weight="600" fill="#2b2b2b">캐시 키에 Origin을 넣은 뒤</text>
+
+  <rect x="16" y="278" width="184" height="48" rx="4" fill="#FDFCFA" stroke="#2b2b2b" class="box"/>
+  <text x="28" y="298" font-size="13" font-weight="600" fill="#2b2b2b">① Origin 없는 요청</text>
+  <text x="28" y="316" font-size="12" fill="#2b2b2b" fill-opacity=".7">예: 다른 사이트 플레이어 · curl</text>
+
+  <rect x="220" y="278" width="184" height="48" rx="4" fill="#FDFCFA" stroke="#2b2b2b" class="box"/>
+  <text x="232" y="298" font-size="13" font-weight="600" fill="#2b2b2b">② crossorigin 요청</text>
+  <text x="232" y="316" font-size="12" fill="#2b2b2b" fill-opacity=".7">Origin: 사이트 주소</text>
+
+  <path d="M108,326 L108,368" fill="none" stroke="#2b2b2b" stroke-width="1.5" marker-end="url(#ah)" class="flow"/>
+  <text x="116" y="352" font-size="12" fill="#2b2b2b">Origin 없는 응답</text>
+  <path d="M312,326 L312,368" fill="none" stroke="#2b2b2b" stroke-width="1.5" marker-end="url(#ah)" class="flow"/>
+  <text x="320" y="352" font-size="12" fill="#2b2b2b">Origin별 응답</text>
+
+  <rect x="16" y="370" width="388" height="76" rx="4" fill="#FDFCFA" stroke="#2b2b2b" stroke-opacity=".5" class="box"/>
+  <text x="28" y="390" font-size="13" font-weight="600" fill="#2b2b2b">CloudFront 캐시 키 = 영상 주소 + Origin</text>
+  <rect x="28" y="402" width="172" height="32" rx="4" fill="#FDFCFA" stroke="#2b2b2b" stroke-opacity=".7" class="slot"/>
+  <text x="114" y="423" font-size="12" fill="#2b2b2b" text-anchor="middle">CORS 헤더 없는 응답</text>
+  <rect x="220" y="402" width="172" height="32" rx="4" fill="#e8590c" fill-opacity=".08" stroke="#e8590c" stroke-width="1.5" class="slot"/>
+  <text x="306" y="423" font-size="12" font-weight="600" fill="#e8590c" text-anchor="middle">CORS 헤더 붙은 응답</text>
+
+  <text x="210" y="468" font-size="12" font-weight="600" fill="#2b2b2b" text-anchor="middle">②는 요청 순서와 상관없이 헤더 붙은 응답을 받음</text>
+</svg>
